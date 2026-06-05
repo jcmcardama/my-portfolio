@@ -10,20 +10,8 @@ import CloseIcon from '@mui/icons-material/Close';
 import { NavLink, useLocation } from 'react-router-dom';
 import ThemeToggle from './ThemeToggle';
 import '../styles/components/Navbar.scss';
+import { NAV_ITEMS } from '../utils/constants';
 // import carloLogo from '../assets/carlo_logo.png';
-
-interface NavItem {
-  label: string;
-  path:  string;
-}
-
-const NAV_ITEMS: NavItem[] = [
-  { label: 'Home',     path: '/'         },
-  { label: 'About',    path: '/about'    },
-  { label: 'Projects', path: '/projects' },
-  { label: 'Skills',   path: '/skills'   },
-  { label: 'Contact',  path: '/contact'  },
-];
 
 export default function Navbar() {
   const theme   = useTheme();

@@ -1,8 +1,9 @@
 import { Box, Typography, Link, Divider } from '@mui/material';
 import '../styles/components/Footer.scss';
+import { FOOTER_ITEMS, year } from '../utils/constants';
 
 export default function Footer() {
-  const year = 2026;
+
 
   return (
     <Box component="footer" className="footer">
@@ -12,11 +13,7 @@ export default function Footer() {
           Jan Carlo M. Cardama © {year}
         </Typography>
         <Box className="footer-link-container">
-          {[
-            { label: 'GitHub',   href: 'https://github.com/yourusername'              },
-            { label: 'LinkedIn', href: 'https://linkedin.com/in/yourusername'         },
-            { label: 'Email',    href: 'mailto:you@example.com'                       },
-          ].map(link => (
+          {FOOTER_ITEMS.map(link => (
             <Link
               key={link.label}
               href={link.href}
