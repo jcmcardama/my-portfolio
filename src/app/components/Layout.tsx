@@ -2,19 +2,13 @@ import { Box } from '@mui/material';
 import { Outlet } from 'react-router-dom';
 import Navbar from './Navbar';
 import Footer from './Footer';
+import '../styles/components/Layout.scss';
 
 export default function Layout() {
   return (
-    <Box
-      sx={{
-        minHeight: '100vh',
-        display: 'flex',
-        flexDirection: 'column',
-        bgcolor: 'background.default',
-      }}
-    >
+    <Box className="layout">
       <Navbar />
-      <Box component="main" sx={{ flex: 1 }}>
+      <Box component="main" className="main-content">
         <Outlet />
       </Box>
       <Footer />
