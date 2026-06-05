@@ -1,6 +1,6 @@
 import { Box, Typography, Link, Divider } from '@mui/material';
 import '../styles/components/Footer.scss';
-import { FOOTER_ITEMS, year } from '../utils/constants';
+import { FOOTER_ITEMS, HOME_TEXTS, year } from '../utils/constants';
 
 export default function Footer() {
 
@@ -10,7 +10,7 @@ export default function Footer() {
       <Divider />
       <Box className="footer-content">
         <Typography variant="body2" color="text.secondary">
-          Jan Carlo M. Cardama © {year}
+          {HOME_TEXTS.NAME} © {year}
         </Typography>
         <Box className="footer-link-container">
           {FOOTER_ITEMS.map(link => (
