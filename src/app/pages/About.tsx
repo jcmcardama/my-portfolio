@@ -1,7 +1,7 @@
 import {
   Container, Box, Typography, Grid, Divider,
 } from '@mui/material';
-import { CAREER, EDUCATION } from '../utils/constants';
+import { ABOUT_TEXTS, CAREER, EDUCATION } from '../utils/constants';
 import '../styles/pages/About.scss';
 import TimelineRow from '../components/TimelineRow';
 
@@ -9,29 +9,24 @@ export default function About() {
   return (
     <Container className="about-container" maxWidth="md">
       <Typography className="about-overline" variant="overline">
-        About Me
+        {ABOUT_TEXTS.OVERLINE}
       </Typography>
       <Typography className="about-title" variant="h2">
-        The person behind the code.
+        {ABOUT_TEXTS.TITLE}
       </Typography>
       <Grid container spacing={6}>
         <Grid size={{xs: 12, md: 7 }}>
           <Typography className="about-description" variant="body1" color="text.secondary">
-            Hi, I'm <strong>Your Name</strong> — a full-stack engineer based in [City, Country].
-            I'm passionate about building products that are not only technically sound but also
-            genuinely delightful to use. I care deeply about performance, accessibility, and
-            developer experience.
+            {ABOUT_TEXTS.DESCRIPTION1}
           </Typography>
           <Typography className="about-description" variant="body1" color="text.secondary">
-            Outside of work you'll find me contributing to open-source, reading about systems
-            design, or exploring new hiking trails. I'm currently open to senior engineering and
-            tech-lead roles at product-focused companies.
+            {ABOUT_TEXTS.DESCRIPTION2}
           </Typography>
         </Grid>
       </Grid>
       <Divider className="about-divider"/>
       <Typography className="about-secondary-title" variant="h4">
-       Career
+        {ABOUT_TEXTS.CAREER}
       </Typography>
       <Box>
         {CAREER.map((item, i) => (
@@ -59,7 +54,7 @@ export default function About() {
       </Box>
       <Divider className="about-divider"/>
       <Typography className="about-secondary-title" variant="h4">
-       Education & Certifications
+        {ABOUT_TEXTS.EDUCATION}
       </Typography>
       <Box>
         {EDUCATION.map((item, i) => (

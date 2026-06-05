@@ -28,3 +28,25 @@ export interface FooterItem {
   label: string;
   href: string;
 }
+
+// ===================================================================
+// About Page Interface
+// ===================================================================
+
+export interface CareerItem {
+  company:  string;
+  role:     string;
+  duration: string;
+  bullets:  string[];
+}
+
+export interface EducationItem {
+  degree: string;
+  school: string;
+  year:   string;
+}
+
+export interface TimelineRowProps {
+  isLast:   boolean;
+  children: React.ReactNode;
+}
