@@ -54,6 +54,7 @@ const baseComponents = {
 };
 
 export const lightTheme: Theme = createTheme({
+  cssVariables: true,
   palette: {
     mode: 'light',
     primary:   { main: '#1A1A2E' },
@@ -86,6 +87,7 @@ export const lightTheme: Theme = createTheme({
 });
 
 export const darkTheme: Theme = createTheme({
+  cssVariables: true,
   palette: {
     mode: 'dark',
     primary:   { main: '#E8E6DF' },
