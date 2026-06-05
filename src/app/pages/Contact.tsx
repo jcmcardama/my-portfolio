@@ -40,18 +40,18 @@ function validateForm(values: FormState): FormErrors {
 const CONTACT_LINKS = [
   {
     icon:  EmailOutlinedIcon,
-    label: 'you@example.com',
-    href:  'mailto:you@example.com',
+    label: 'jcmcardama@gmail.com',
+    href:  'mailto:jcmcardama@gmail.com',
   },
   {
     icon:  LinkedInIcon,
-    label: 'linkedin.com/in/yourusername',
-    href:  'https://linkedin.com/in/yourusername',
+    label: 'linkedin.com/in/jan-carlo-cardama',
+    href:  'https://www.linkedin.com/in/jan-carlo-cardama',
   },
   {
     icon:  GitHubIcon,
-    label: 'github.com/yourusername',
-    href:  'https://github.com/yourusername',
+    label: 'github.com/jcmcardama',
+    href:  'https://github.com/jcmcardama',
   },
 ];
 
