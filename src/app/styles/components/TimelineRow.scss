@@ -1,0 +1,34 @@
+.timeline-row-container {
+    display: flex;
+    gap: 24px;
+
+    .dot-plus-vertical-connector {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-shrink: 0;
+
+        .timeline-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            border: 2px solid;
+            border-color: var(--dynamic-dot-color);
+            background-color: var(--mui-palette-background-default);
+            margin-top: 4px; /* vertically align with first line of text */
+            flex-shrink: 0;
+        }
+
+        .timeline-connector {
+            width: 1px;
+            flex-grow: 1;
+            background-color: var(--mui-palette-divider);
+            margin: 8px 0; /* space between dot and connector */
+            min-height: 24px; /* ensure connector is visible even if content is short */
+        }
+    }
+
+    .timeline-content {
+        flex: 1;
+    }
+}
