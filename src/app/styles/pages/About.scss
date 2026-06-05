@@ -1,0 +1,69 @@
+.about-container{
+    padding: 64px 0;
+
+    @media (min-width: 900px) {
+        padding: 96px 0;
+    }
+
+    .about-overline {
+        color: var(--mui-palette-secondary-main);
+        letter-spacing: 0.15em;
+        font-weight: 600;
+    }
+
+    .about-title {
+        margin-top: 8px;
+        margin-bottom: 32px;
+        font-size: 2.2rem;
+
+        @media (min-width: 900px) {
+            font-size: 3rem;
+        }
+    }
+
+    .about-description {
+        margin-bottom: 16px;
+    }
+
+    .about-divider {
+        margin: 32px 0;
+    }
+
+    .about-secondary-title {
+        margin-bottom: 40px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .about-timeline-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        flex-wrap: wrap;
+        gap: 4px;
+
+        .about-timeline-title {
+            font-size: 1rem;
+            font-weight: 700;
+        }
+
+        .about-timeline-duration {
+            font-family: 'monospace';
+        }
+    }
+
+    .about-timeline-location {
+        margin-bottom: 12px;
+        font-weight: 600;
+    }
+
+    .about-timeline-bullets-container {
+        margin: 0;
+        padding-left: 20px;
+
+        .about-timeline-bullet {
+            margin-bottom: 4px;
+        }
+    }
+}
