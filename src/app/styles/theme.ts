@@ -61,13 +61,20 @@ export const lightTheme: Theme = createTheme({
     secondary: { main: '#4A6FA5' },
     background: {
       default: '#FAFAF8',
-      paper:   '#FFFFFF',
+      paper: '#FFFFFF',
     },
     text: {
-      primary:   '#111111',
+      primary: '#111111',
       secondary: '#555555',
     },
     divider: '#E8E8E4',
+    action: {
+      hover: 'rgba(26, 26, 46, 0.05)',   // subtle tint of primary
+      selected: 'rgba(26, 26, 46, 0.08)',   // slightly stronger — used by active nav items
+      focus: 'rgba(26, 26, 46, 0.10)',
+      disabledBackground: 'rgba(0, 0, 0, 0.06)',
+      disabled: 'rgba(0, 0, 0, 0.30)',
+    },
   },
   typography: baseTypography,
   components: {
@@ -101,6 +108,13 @@ export const darkTheme: Theme = createTheme({
       secondary: '#9A9890',
     },
     divider: '#2A2A2A',
+    action: {
+      hover: 'rgba(232, 230, 223, 0.06)',  // subtle tint of primary
+      selected: 'rgba(232, 230, 223, 0.10)',  // slightly stronger — used by active nav items
+      focus: 'rgba(232, 230, 223, 0.12)',
+      disabledBackground: 'rgba(255, 255, 255, 0.06)',
+      disabled: 'rgba(255, 255, 255, 0.28)',
+    },
   },
   typography: baseTypography,
   components: {

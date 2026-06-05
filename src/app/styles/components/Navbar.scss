@@ -3,10 +3,8 @@
   width: 100%;
   margin: 0 auto;
   padding: 0 1rem;
-}
 
-@media (min-width: 960px) {
-  .navbar-toolbar {
+  @media (min-width: 960px) {
     padding: 0 2rem;
   }
 }
@@ -18,7 +16,7 @@
   flex-grow: 1;
   text-decoration: none;
   color: var(--mui-palette-text-primary);
-  font-family: var(--font-heading);
+  font-family: var(--mui-font-h6);
   font-weight: 400;
   font-size: 1.25rem;
 }
@@ -34,7 +32,7 @@
 .navbar-links {
   display: flex;
   align-items: center;
-  gap: 3rem;
+  gap: 1.5rem;
 }
 
 .navbar-link {
@@ -81,7 +79,7 @@
 }
 
 .navbar-mobile-actions .MuiIconButton-root {
-  margin-left: 0.5rem;
+  margin-left: 0.25rem;
 }
 
 .navbar-drawer-header {
@@ -92,7 +90,7 @@
 }
 
 .navbar-drawer-title {
-  font-family: var(--font-heading);
+  font-family: var(--mui-font-h6);
   font-weight: 400;
 }
 
@@ -106,5 +104,5 @@
 }
 
 .navbar-drawer-button.active {
-  background-color: var(--action-selected);
+  background-color: var(--mui-palette-action-selected);
 }
