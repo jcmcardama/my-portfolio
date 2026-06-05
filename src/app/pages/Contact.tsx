@@ -95,14 +95,14 @@ export default function Contact() {
         Drop me a message and I'll get back to you within 24 hours.
       </Typography>
 
-      <Grid container sx={{ spacing: 4,  alignItems: "stretch" }}>
+      <Grid container sx={{ justifyContent: 'space-between' }}>
 
         {/* Left — Contact info + Resume wrapped in matching Paper */}
-        <Grid size={{xs: 12, md: 4 }}>
+        <Grid size={{xs: 12, md: 5 }}>
           <Paper
             variant="outlined"
             sx={{
-              p: { xs: 3, md: 4 },
+              p: { xs: 2, md: 3 },
               borderColor: 'divider',
               height: '100%',
               display: 'flex',
@@ -174,15 +174,15 @@ export default function Contact() {
         </Grid>
 
         {/* Right — Contact form */}
-        <Grid size={{xs: 12, md: 8 }} sx={{ display: 'flex', flexDirection: 'column' }}>
+        <Grid size={{xs: 12, md: 6 }} sx={{ display: 'flex', flexDirection: 'column', paddingTop: {xs: 4, md: 0 } }}>
           <Paper
             variant="outlined"
             component="form"
             onSubmit={handleSubmit}
             noValidate
-            sx={{ p: { xs: 3, md: 4 }, borderColor: 'divider', height: '100%' }}
+            sx={{ p: { xs: 2, md: 3 }, borderColor: 'divider', height: '100%' }}
           >
-            <Grid container spacing={2.5}>
+            <Grid container rowSpacing={3} columnSpacing={2.5}>
               <Grid size={{xs: 12, sm: 6 }}>
                 <TextField
                   label="Full Name"
@@ -238,12 +238,13 @@ export default function Contact() {
                   size="small"
                 />
               </Grid>
-              <Grid size={{xs: 12}}>
+              <Grid size={{xs: 12}} sx={{ display: 'flex', justifyContent: 'flex-end' }}>
                 <Button
                   type="submit"
                   variant="contained"
                   size="large"
                   endIcon={<SendOutlinedIcon />}
+                  fullWidth
                 >
                   Send Message
                 </Button>
