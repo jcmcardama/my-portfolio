@@ -9,64 +9,64 @@ export default function Home() {
     <Container maxWidth="md">
       <Box className="home-content">
         <Typography
-          variant="overline"
           className="home-overline"
+          variant="overline"
         >
           {HOME_TEXTS.OVERLINE}
         </Typography>
         <Typography
-          variant="h1"
           className="home-name"
+          variant="h1"
         >
           {HOME_TEXTS.NAME}
         </Typography>
         <Typography
-          variant="h3"
           className="home-title"
+          variant="h3"
         >
           {HOME_TEXTS.TITLE}
         </Typography>
         <Typography
-          variant="body1"
           className="home-tagline"
+          variant="body1"
         >
           {HOME_TEXTS.TAGLINE}
         </Typography>
         <Typography
-          variant="body1"
           className="home-summary"
+          variant="body1"
         >
           {HOME_TEXTS.SUMMARY}
         </Typography>
         <Stack direction="row" className="home-skills-stack">
           {TAGS.map(tag => (
             <Chip
+              className="home-skill-list-item"
               key={tag}
               label={tag}
               variant="outlined"
               size="small"
-              className="home-skill-list-item"
             />
           ))}
         </Stack>
         <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2}>
           <Button
+            className="home-view-work-button"
             component={RouterLink}
             to="/projects"
             variant="contained"
             color="primary"
             size="large"
-            className="home-view-work-button"
           >
             {HOME_TEXTS.BTN_VIEW_WORK}
           </Button>
           <Button
+            className="home-contact-button"
             component={RouterLink}
             to="/contact"
             variant="outlined"
             color="primary"
             size="large"
-            className="home-contact-button"
           >
             {HOME_TEXTS.BTN_CONTACT}
           </Button>

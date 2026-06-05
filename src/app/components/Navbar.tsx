@@ -31,10 +31,10 @@ export default function Navbar() {
         <Toolbar className="navbar-toolbar">
           {/* Logo / Name */}
           <Typography
+            className="navbar-brand"
             component={NavLink}
             to="/"
             variant="h6"
-            className="navbar-brand"
           >
             <Avatar className="navbar-avatar">JC</Avatar>
             {/* <Avatar alt="JCMC logo" src={carloLogo} /> */}
@@ -45,11 +45,11 @@ export default function Navbar() {
             <Box className="navbar-links">
               {NAV_ITEMS.map(item => (
                 <Button
+                  className={navLinkClass(isActive(item.path))}
                   key={item.path}
                   component={NavLink}
                   to={item.path}
                   disableRipple
-                  className={navLinkClass(isActive(item.path))}
                 >
                   {item.label}
                 </Button>
@@ -81,7 +81,7 @@ export default function Navbar() {
         onClose={() => setDrawerOpen(false)}
       >
         <Box className="navbar-drawer-header">
-          <Typography variant="h6" className="navbar-drawer-title">
+          <Typography className="navbar-drawer-title" variant="h6">
             Menu
           </Typography>
           <IconButton onClick={() => setDrawerOpen(false)}>
@@ -93,10 +93,10 @@ export default function Navbar() {
           {NAV_ITEMS.map(item => (
             <ListItem key={item.path} disablePadding>
               <ListItemButton
+                className={isActive(item.path) ? 'navbar-drawer-button active' : 'navbar-drawer-button'}
                 component={NavLink}
                 to={item.path}
                 onClick={() => setDrawerOpen(false)}
-                className={isActive(item.path) ? 'navbar-drawer-button active' : 'navbar-drawer-button'}
               >
                 <ListItemText
                   primary={item.label}
