@@ -1,6 +1,8 @@
 import {
-  Container, Typography, Grid, Divider,
+  Container, Box, Typography, Grid, Divider,
 } from '@mui/material';
+
+// ── Types ────────────────────────────────────────────────────────────────────
 
 interface CareerItem {
   company:  string;
@@ -14,6 +16,8 @@ interface EducationItem {
   school: string;
   year:   string;
 }
+
+// ── Data ─────────────────────────────────────────────────────────────────────
 
 const CAREER: CareerItem[] = [
   {
@@ -58,6 +62,57 @@ const EDUCATION: EducationItem[] = [
   },
 ];
 
+// ── Reusable custom timeline row ─────────────────────────────────────────────
+
+interface TimelineRowProps {
+  isLast:   boolean;
+  dotColor: 'primary.main' | 'secondary.main';
+  children: React.ReactNode;
+}
+
+function TimelineRow({ isLast, dotColor, children }: TimelineRowProps) {
+  return (
+    <Box sx={{ display: 'flex', gap: 3 }}>
+
+      {/* Left column: dot + vertical connector line */}
+      <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', flexShrink: 0 }}>
+        {/* Dot */}
+        <Box
+          sx={{
+            width: 12,
+            height: 12,
+            borderRadius: '50%',
+            border: '2px solid',
+            borderColor: dotColor,
+            bgcolor: 'background.default',
+            mt: '4px',          // vertically align with first line of text
+            flexShrink: 0,
+          }}
+        />
+        {/* Connector line — hidden for last item */}
+        {!isLast && (
+          <Box
+            sx={{
+              width: '1px',
+              flexGrow: 1,
+              bgcolor: 'divider',
+              my: 1,
+              minHeight: 24,
+            }}
+          />
+        )}
+      </Box>
+
+      {/* Right column: card content */}
+      <Box sx={{ pb: isLast ? 0 : 5, flex: 1 }}>
+        {children}
+      </Box>
+    </Box>
+  );
+}
+
+// ── Page component ────────────────────────────────────────────────────────────
+
 export default function About() {
   return (
     <Container maxWidth="md" sx={{ py: { xs: 8, md: 12 } }}>
@@ -86,17 +141,68 @@ export default function About() {
         </Grid>
       </Grid>
 
-      {/* Career Timeline */}
+      {/* ── Career ── */}
       <Divider sx={{ my: 8 }} />
-      <Typography variant="h4" sx={{ mb: 4, display: 'flex', alignItems: 'center', gap: 1.5 }}>
-        Career
+      <Typography variant="h4" sx={{ mb: 5, display: 'flex', alignItems: 'center', gap: 1.5 }}>
+       Career
       </Typography>
 
-      {/* Education Timeline */}
+      <Box>
+        {CAREER.map((item, i) => (
+          <TimelineRow key={i} isLast={i === CAREER.length - 1} dotColor="primary.main">
+            {/* Header row: role + duration */}
+            <Box sx={{ display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', gap: 0.5 }}>
+              <Typography variant="h6" sx={{ fontWeight: 700, fontSize: '1rem' }}>
+                {item.role}
+              </Typography>
+              <Typography variant="body2" color="text.secondary" sx={{ fontFamily: 'monospace' }}>
+                {item.duration}
+              </Typography>
+            </Box>
+
+            {/* Company */}
+            <Typography variant="body2" color="secondary.main" sx={{ mb: 1.5, fontWeight: 600 }}>
+              {item.company}
+            </Typography>
+
+            {/* Bullet points */}
+            <Box component="ul" sx={{ m: 0, pl: 2.5 }}>
+              {item.bullets.map((b, j) => (
+                <Typography key={j} component="li" variant="body2" color="text.secondary" sx={{ mb: 0.5 }}>
+                  {b}
+                </Typography>
+              ))}
+            </Box>
+          </TimelineRow>
+        ))}
+      </Box>
+
+      {/* ── Education ── */}
       <Divider sx={{ my: 8 }} />
-      <Typography variant="h4" sx={{ mb: 4, display: 'flex', alignItems: 'center', gap: 1.5 }}>
-        Education & Certifications
+      <Typography variant="h4" sx={{ mb: 5, display: 'flex', alignItems: 'center', gap: 1.5 }}>
+       Education & Certifications
       </Typography>
+
+      <Box>
+        {EDUCATION.map((item, i) => (
+          <TimelineRow key={i} isLast={i === EDUCATION.length - 1} dotColor="secondary.main">
+            {/* Header row: degree + year */}
+            <Box sx={{ display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', gap: 0.5 }}>
+              <Typography variant="h6" sx={{ fontWeight: 700, fontSize: '1rem' }}>
+                {item.degree}
+              </Typography>
+              <Typography variant="body2" color="text.secondary" sx={{ fontFamily: 'monospace' }}>
+                {item.year}
+              </Typography>
+            </Box>
+
+            {/* School */}
+            <Typography variant="body2" color="secondary.main" sx={{ fontWeight: 600 }}>
+              {item.school}
+            </Typography>
+          </TimelineRow>
+        ))}
+      </Box>
 
     </Container>
   );

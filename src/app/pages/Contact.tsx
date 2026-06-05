@@ -40,18 +40,18 @@ function validateForm(values: FormState): FormErrors {
 const CONTACT_LINKS = [
   {
     icon:  EmailOutlinedIcon,
-    label: 'jcmcardama@gmail.com',
-    href:  'mailto:jcmcardama@gmail.com',
+    label: 'you@example.com',
+    href:  'mailto:you@example.com',
   },
   {
     icon:  LinkedInIcon,
-    label: 'linkedin.com/in/jan-carlo-cardama',
-    href:  'https://www.linkedin.com/in/jan-carlo-cardama',
+    label: 'linkedin.com/in/yourusername',
+    href:  'https://linkedin.com/in/yourusername',
   },
   {
     icon:  GitHubIcon,
-    label: 'github.com/jcmcardama',
-    href:  'https://github.com/jcmcardama',
+    label: 'github.com/yourusername',
+    href:  'https://github.com/yourusername',
   },
 ];
 
@@ -95,50 +95,92 @@ export default function Contact() {
         Drop me a message and I'll get back to you within 24 hours.
       </Typography>
 
-      <Grid container spacing={6}>
+      <Grid container sx={{ spacing: 4,  alignItems: "stretch" }}>
 
-        {/* Left — Contact info + Resume */}
+        {/* Left — Contact info + Resume wrapped in matching Paper */}
         <Grid size={{xs: 12, md: 4 }}>
-          <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
-            {CONTACT_LINKS.map(({ icon: Icon, label, href }) => (
-              <Box key={label} sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
-                <Icon sx={{ color: 'secondary.main', fontSize: '1.3rem', flexShrink: 0 }} />
-                <Link
-                  href={href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  underline="hover"
-                  variant="body2"
-                  color="text.secondary"
-                  sx={{ wordBreak: 'break-all', '&:hover': { color: 'text.primary' }, transition: 'color 0.2s' }}
-                >
-                  {label}
-                </Link>
-              </Box>
-            ))}
+          <Paper
+            variant="outlined"
+            sx={{
+              p: { xs: 3, md: 4 },
+              borderColor: 'divider',
+              height: '100%',
+              display: 'flex',
+              flexDirection: 'column',
+              gap: 3,
+            }}
+          >
+            {/* Header */}
+            <Box>
+              <Typography variant="h6" sx={{ fontWeight: 700, fontSize: '0.95rem', mb: 0.5 }}>
+                Contact Info
+              </Typography>
+              <Typography variant="body2" color="text.secondary" sx={{ fontSize: '0.8rem' }}>
+                Reach out through any of these channels.
+              </Typography>
+            </Box>
 
-            <Divider sx={{ my: 1 }} />
+            <Divider />
+
+            {/* Links */}
+            <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2.5 }}>
+              {CONTACT_LINKS.map(({ icon: Icon, label, href }) => (
+                <Box key={label} sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
+                  <Box
+                    sx={{
+                      width: 36,
+                      height: 36,
+                      borderRadius: 1.5,
+                      bgcolor: 'action.hover',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      flexShrink: 0,
+                    }}
+                  >
+                    <Icon sx={{ color: 'secondary.main', fontSize: '1.1rem' }} />
+                  </Box>
+                  <Link
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    underline="hover"
+                    variant="body2"
+                    color="text.secondary"
+                    sx={{ wordBreak: 'break-all', '&:hover': { color: 'text.primary' }, transition: 'color 0.2s' }}
+                  >
+                    {label}
+                  </Link>
+                </Box>
+              ))}
+            </Box>
+
+            {/* Spacer pushes the resume button to the bottom */}
+            <Box sx={{ flexGrow: 1 }} />
+
+            <Divider />
 
             <Button
               variant="outlined"
               href={resumePDF}
-              download="resume.pdf"
+              download="YourName_Resume.pdf"
               startIcon={<DownloadOutlinedIcon />}
-              sx={{ alignSelf: 'flex-start', borderColor: 'divider' }}
+              fullWidth
+              sx={{ borderColor: 'divider' }}
             >
               Download Résumé
             </Button>
-          </Box>
+          </Paper>
         </Grid>
 
         {/* Right — Contact form */}
-        <Grid size={{xs: 12, md: 8 }}>
+        <Grid size={{xs: 12, md: 8 }} sx={{ display: 'flex', flexDirection: 'column' }}>
           <Paper
             variant="outlined"
             component="form"
             onSubmit={handleSubmit}
             noValidate
-            sx={{ p: { xs: 3, md: 4 }, borderColor: 'divider' }}
+            sx={{ p: { xs: 3, md: 4 }, borderColor: 'divider', height: '100%' }}
           >
             <Grid container spacing={2.5}>
               <Grid size={{xs: 12, sm: 6 }}>
