@@ -256,5 +256,12 @@ export const CONTACT_TEXT = {
     MESSAGE: "Message",
     BTN_TEXT: "Submit"
   },
+  ERROR_MESSAGE: {
+    NAME_REQUIRED: "Name is required.",
+    EMAIL_REQUIRED: "Email is required.",
+    INVALID_EMAIL: "Enter a valid email address.",
+    SUBJECT_REQUIRED: "Subject is required.",
+    MESSAGE_LENGTH: "Message must be at least 20 characters."
+  },
   ALERT_MESSAGE: "Message sent! I'll be in touch shortly."
 };
