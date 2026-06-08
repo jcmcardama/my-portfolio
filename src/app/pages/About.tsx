@@ -15,7 +15,7 @@ export default function About() {
         {ABOUT_TEXTS.TITLE}
       </Typography>
       <Grid container spacing={6}>
-        <Grid size={{xs: 12, md: 7 }}>
+        <Grid>
           <Typography className="about-description" variant="body1" color="text.secondary">
             {ABOUT_TEXTS.DESCRIPTION1}
           </Typography>
