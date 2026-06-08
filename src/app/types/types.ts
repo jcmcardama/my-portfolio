@@ -1,3 +1,4 @@
+import { SvgIconComponent } from "@mui/icons-material";
 import type { ThemeMode } from "../utils/constants";
 
 // ===================================================================
@@ -62,4 +63,20 @@ export interface Project {
   githubUrl:   string;
   liveUrl:     string;
   category:    string;
+}
+
+// ===================================================================
+// Skills Page Interface
+// ===================================================================
+
+export interface Skill {
+  name:  string;
+  icon:  SvgIconComponent;
+}
+
+export interface SkillCategory {
+  category:    string;
+  icon:        SvgIconComponent;
+  description: string;
+  skills:      Skill[];
 }

@@ -1,4 +1,14 @@
-import type { CareerItem, EducationItem, FooterItem, NavItem, Project } from "../types/types";
+import type { CareerItem, EducationItem, FooterItem, NavItem, Project, SkillCategory } from "../types/types";
+import CodeIcon              from '@mui/icons-material/Code';
+import StorageIcon           from '@mui/icons-material/Storage';
+import BuildOutlinedIcon     from '@mui/icons-material/BuildOutlined';
+import BrushOutlinedIcon     from '@mui/icons-material/BrushOutlined';
+import JavascriptIcon        from '@mui/icons-material/Javascript';
+import DataObjectIcon        from '@mui/icons-material/DataObject';
+import DnsIcon               from '@mui/icons-material/Dns';
+import CloudIcon             from '@mui/icons-material/Cloud';
+import TerminalIcon          from '@mui/icons-material/Terminal';
+import IntegrationInstructionsIcon from '@mui/icons-material/IntegrationInstructions';
 
 // ===================================================================
 // Theme Constants
@@ -45,8 +55,10 @@ export const HOME_TEXTS = {
   TITLE: 'Full-Stack Software Engineer',
   TAGLINE: '"Building products that are fast, accessible, and a joy to use."',
   SUMMARY: 'A software engineer with 5+ years of experience turning complex problems into elegant, scalable solutions. I thrive at the intersection of great engineering and thoughtful design — shipping products that users love and teams are proud of.',
-  BTN_VIEW_WORK: 'View My Work',
-  BTN_CONTACT: 'Get in Touch'
+  BUTTON: {
+    VIEW_WORK: 'View My Work',
+    CONTACT: 'Get in Touch'
+  }
 };
 
 // ===================================================================
@@ -62,7 +74,7 @@ export const CAREER: CareerItem[] = [
       'Led rebuild of core product dashboard, reducing load time by 40%.',
       'Mentored 3 junior engineers and established frontend code standards.',
       'Collaborated cross-functionally with design and product teams.',
-    ],
+    ]
   },
   {
     company:  'Tech Startup Inc.',
@@ -71,7 +83,7 @@ export const CAREER: CareerItem[] = [
     bullets:  [
       'Built and maintained RESTful APIs serving 50k+ daily active users.',
       'Introduced TypeScript across the frontend codebase, reducing bugs by 30%.',
-    ],
+    ]
   },
   {
     company:  'Freelance',
@@ -79,21 +91,21 @@ export const CAREER: CareerItem[] = [
     duration: '2018 – 2020',
     bullets:  [
       'Delivered 15+ client projects spanning e-commerce, portfolio, and SaaS.',
-    ],
-  },
+    ]
+  }
 ];
 
 export const EDUCATION: EducationItem[] = [
   {
     degree: 'B.Sc. Computer Science',
     school: 'State University',
-    year:   '2018',
+    year:   '2018'
   },
   {
     degree: 'AWS Certified Solutions Architect',
     school: 'Amazon Web Services',
-    year:   '2021',
-  },
+    year:   '2021'
+  }
 ];
 
 export const ABOUT_TEXTS = {
@@ -118,7 +130,7 @@ export const PROJECTS: Project[] = [
       'role-based access control, GitHub PR integration, and Slack notifications.',
     tags:      ['React', 'TypeScript', 'Node.js', 'PostgreSQL', 'Socket.io', 'Docker'],
     githubUrl: 'https://github.com/yourusername/devflow',
-    liveUrl:   'https://devflow-demo.vercel.app',
+    liveUrl:   'https://devflow-demo.vercel.app'
   },
   {
     title: 'Luminary — E-Commerce Platform',
@@ -128,7 +140,7 @@ export const PROJECTS: Project[] = [
       'and a headless CMS for content editing without deployments.',
     tags:      ['Next.js', 'TypeScript', 'Stripe', 'Sanity CMS', 'Tailwind CSS', 'Vercel'],
     githubUrl: 'https://github.com/yourusername/luminary',
-    liveUrl:   'https://luminary-store.vercel.app',
+    liveUrl:   'https://luminary-store.vercel.app'
   },
   {
     title: 'Pulse — Real-Time Analytics Dashboard',
@@ -138,8 +150,8 @@ export const PROJECTS: Project[] = [
       'with sub-second latency. Optimized for readability across large datasets.',
     tags:      ['React', 'D3.js', 'WebSockets', 'Redis', 'AWS Lambda', 'Chart.js'],
     githubUrl: 'https://github.com/yourusername/pulse',
-    liveUrl:   'https://pulse-analytics.vercel.app',
-  },
+    liveUrl:   'https://pulse-analytics.vercel.app'
+  }
 ];
 
 export const PROJECTS_TEXTS = {
@@ -150,4 +162,53 @@ export const PROJECTS_TEXTS = {
     SOURCE: 'Source',
     LIVE: 'Live Demo'
   }
+};
+
+// ===================================================================
+// Skills Page Constants
+// ===================================================================
+
+export const SKILL_CATEGORIES: SkillCategory[] = [
+  {
+    category:    'Frontend',
+    icon:        CodeIcon,
+    description: 'Building rich, accessible, and performant user interfaces.',
+    skills: [
+      { name: 'React / Next.js',   icon: JavascriptIcon },
+      { name: 'TypeScript',        icon: DataObjectIcon },
+      { name: 'MUI / Tailwind CSS',icon: BrushOutlinedIcon },
+      { name: 'Testing (Jest / RTL)',icon: IntegrationInstructionsIcon },
+      { name: 'GraphQL (Client)',  icon: DataObjectIcon }
+    ],
+  },
+  {
+    category:    'Backend',
+    icon:        StorageIcon,
+    description: 'Designing reliable APIs and scalable server-side architecture.',
+    skills: [
+      { name: 'Node.js / Express', icon: TerminalIcon },
+      { name: 'PostgreSQL',        icon: StorageIcon },
+      { name: 'Redis',             icon: DnsIcon },
+      { name: 'REST & GraphQL',    icon: DataObjectIcon },
+      { name: 'Prisma / Drizzle',  icon: StorageIcon }
+    ],
+  },
+  {
+    category:    'DevOps & Tools',
+    icon:        BuildOutlinedIcon,
+    description: 'Shipping and maintaining production systems with confidence.',
+    skills: [
+      { name: 'Docker',          icon: CloudIcon },
+      { name: 'AWS (EC2/S3/Lambda)', icon: CloudIcon },
+      { name: 'CI/CD (GitHub Actions)', icon: IntegrationInstructionsIcon },
+      { name: 'Vercel / Netlify',icon: CloudIcon },
+      { name: 'Git & GitHub',    icon: TerminalIcon }
+    ],
+  }
+];
+
+export const SKILLS_TEXT = {
+  OVERLINE: 'Expertise',
+  TITLE: 'Skills.',
+  DESCRIPTION: 'Technologies and tools I work with professionally. Dots indicate depth of experience.'
 };
