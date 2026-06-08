@@ -2,8 +2,8 @@ import {
   Container, Box, Typography, Grid, Divider,
 } from '@mui/material';
 import { ABOUT_TEXTS, CAREER, EDUCATION } from '../utils/constants';
-import '../styles/pages/About.scss';
 import TimelineRow from '../components/TimelineRow';
+import '../styles/pages/About.scss';
 
 export default function About() {
   return (
