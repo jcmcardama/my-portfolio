@@ -50,3 +50,16 @@ export interface TimelineRowProps {
   isLast:   boolean;
   children: React.ReactNode;
 }
+
+// ===================================================================
+// Projects Page Interface
+// ===================================================================
+
+export interface Project {
+  title:       string;
+  description: string;
+  tags:        string[];
+  githubUrl:   string;
+  liveUrl:     string;
+  category:    string;
+}

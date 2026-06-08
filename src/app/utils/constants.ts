@@ -1,4 +1,4 @@
-import type { CareerItem, EducationItem, FooterItem, NavItem } from "../types/types";
+import type { CareerItem, EducationItem, FooterItem, NavItem, Project } from "../types/types";
 
 // ===================================================================
 // Theme Constants
@@ -103,4 +103,51 @@ export const ABOUT_TEXTS = {
   DESCRIPTION2: `Outside of work you'll find me contributing to open-source, reading about systems design, or exploring new hiking trails. I'm currently open to senior engineering and tech-lead roles at product-focused companies.`,
   CAREER: 'Career',
   EDUCATION: 'Education & Certifications'
+};
+
+// ===================================================================
+// Projects Page Constants
+// ===================================================================
+
+export const PROJECTS: Project[] = [
+  {
+    title: 'DevFlow — Project Management SaaS',
+    category: 'Full-Stack',
+    description:
+      'A real-time Kanban board built for distributed engineering teams. Features drag-and-drop, ' +
+      'role-based access control, GitHub PR integration, and Slack notifications.',
+    tags:      ['React', 'TypeScript', 'Node.js', 'PostgreSQL', 'Socket.io', 'Docker'],
+    githubUrl: 'https://github.com/yourusername/devflow',
+    liveUrl:   'https://devflow-demo.vercel.app',
+  },
+  {
+    title: 'Luminary — E-Commerce Platform',
+    category: 'Full-Stack',
+    description:
+      'A performant, SEO-friendly e-commerce storefront with Stripe payments, inventory management, ' +
+      'and a headless CMS for content editing without deployments.',
+    tags:      ['Next.js', 'TypeScript', 'Stripe', 'Sanity CMS', 'Tailwind CSS', 'Vercel'],
+    githubUrl: 'https://github.com/yourusername/luminary',
+    liveUrl:   'https://luminary-store.vercel.app',
+  },
+  {
+    title: 'Pulse — Real-Time Analytics Dashboard',
+    category: 'Frontend',
+    description:
+      'A data-visualization dashboard that ingests live event streams and renders interactive charts ' +
+      'with sub-second latency. Optimized for readability across large datasets.',
+    tags:      ['React', 'D3.js', 'WebSockets', 'Redis', 'AWS Lambda', 'Chart.js'],
+    githubUrl: 'https://github.com/yourusername/pulse',
+    liveUrl:   'https://pulse-analytics.vercel.app',
+  },
+];
+
+export const PROJECTS_TEXTS = {
+  OVERLINE: 'Selected Work',
+  TITLE: 'Projects.',
+  DESCRIPTION: 'A curated selection of projects that represent the depth and breadth of my engineering work.',
+  BUTTON: {
+    SOURCE: 'Source',
+    LIVE: 'Live Demo'
+  }
 };
