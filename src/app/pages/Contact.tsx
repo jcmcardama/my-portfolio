@@ -98,8 +98,6 @@ export default function Contact() {
             </Button>
           </Paper>
         </Grid>
-
-        {/* Right — Contact form */}
         <Grid size={{xs: 12, md: 6.5 }}>
           <Paper
             className="contact-section-form-container"
