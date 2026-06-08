@@ -1,0 +1,96 @@
+.projects-container{
+    padding: 64px 0;
+
+    @media (min-width: 900px) {
+        padding: 96px 0;
+    }
+
+    .projects-overline {
+        color: var(--mui-palette-secondary-main);
+        letter-spacing: 0.15em;
+        font-weight: 600;
+    }
+
+    .projects-title {
+        margin-top: 8px;
+        margin-bottom: 16px;
+        font-size: 2.2rem;
+
+        @media (min-width: 900px) {
+            font-size: 3rem;
+        }
+    }
+
+    .projects-description {
+        margin-bottom: 64px;
+        max-width: 420px;
+    }
+} 
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border-color: var(--mui-palette-divider);
+    transition: border-color 0.2s, box-shadow 0.2s;
+    
+    &:hover {
+        border-color: var(--mui-palette-secondary-main);
+        box-shadow: 0 8px 40px rgba(0, 0, 0, 0.08);
+    }
+
+    .project-card-content {
+        flex-grow: 1;
+        padding: 24px;
+
+        .project-card-content-category {
+            color: var(--mui-palette-secondary-main);
+            font-size: 0.7rem;
+            letter-spacing: 0.12em;
+        }
+
+        .project-card-content-title {
+            margin-top: 4px;
+            margin-bottom: 12px;
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
+
+        .project-card-content-description {
+            margin-bottom: 24px;
+            line-height: 1.75;
+        }
+
+        .project-card-content-divider {
+            margin-bottom: 20px;
+        }
+
+        .project-card-content-tags {
+            flex-wrap: wrap;
+            gap: 6px;
+
+            .project-card-content-tag {
+                background-color: var(--mui-palette-action-hover);
+                color: var(--mui-palette-text-secondary);
+                font-size: 0.7rem;
+                height: 24px;
+                border-radius: 4px;
+            }
+        }
+    }
+
+    .project-card-actions {
+        padding: 24px;
+        padding-top: 0;
+        gap: 8px;
+
+        .project-card-actions-button-source {
+            flex: 1;
+            border-color: var(--mui-palette-divider);
+        }
+
+        .project-card-actions-button-live {
+            flex: 1;
+        }
+    }
+}
