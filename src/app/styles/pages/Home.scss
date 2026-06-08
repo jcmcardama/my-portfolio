@@ -60,7 +60,7 @@
     .home-summary {
         color: var(--mui-palette-text-secondary);
         max-width: 620px;
-        margin-bottom: 48px;
+        margin-bottom: 32px;
         line-height: 1.8;
         font-size: 1rem;
 
@@ -73,7 +73,7 @@
         display: flex;
         flex-wrap: wrap;
         gap: 8px;
-        margin-bottom: 56px;
+        margin-bottom: 32px;
 
         .home-skill-list-item {
             border-color: var(--mui-palette-divider);
