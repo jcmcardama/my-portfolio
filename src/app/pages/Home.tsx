@@ -58,7 +58,7 @@ export default function Home() {
             color="primary"
             size="large"
           >
-            {HOME_TEXTS.BTN_VIEW_WORK}
+            {HOME_TEXTS.BUTTON.VIEW_WORK}
           </Button>
           <Button
             className="home-contact-button"
@@ -68,7 +68,7 @@ export default function Home() {
             color="primary"
             size="large"
           >
-            {HOME_TEXTS.BTN_CONTACT}
+            {HOME_TEXTS.BUTTON.CONTACT}
           </Button>
         </Stack>
       </Box>
