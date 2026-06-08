@@ -80,3 +80,21 @@ export interface SkillCategory {
   description: string;
   skills:      Skill[];
 }
+
+// ===================================================================
+// Contact Page Interface
+// ===================================================================
+
+export interface FormState {
+  name:    string;
+  email:   string;
+  subject: string;
+  message: string;
+}
+
+export interface FormErrors {
+  name?:    string;
+  email?:   string;
+  subject?: string;
+  message?: string;
+}

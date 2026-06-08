@@ -3,57 +3,13 @@ import {
   Container, Typography, Grid, Box, TextField, Button,
   Paper, Link, Divider, Snackbar, Alert,
 } from '@mui/material';
-import EmailOutlinedIcon    from '@mui/icons-material/EmailOutlined';
-import LinkedInIcon         from '@mui/icons-material/LinkedIn';
-import GitHubIcon           from '@mui/icons-material/GitHub';
 import DownloadOutlinedIcon from '@mui/icons-material/DownloadOutlined';
 import SendOutlinedIcon     from '@mui/icons-material/SendOutlined';
 import resumePDF            from '../assets/resume.pdf';
-
-interface FormState {
-  name:    string;
-  email:   string;
-  subject: string;
-  message: string;
-}
-
-interface FormErrors {
-  name?:    string;
-  email?:   string;
-  subject?: string;
-  message?: string;
-}
-
-const INITIAL_FORM: FormState = { name: '', email: '', subject: '', message: '' };
-
-function validateForm(values: FormState): FormErrors {
-  const errors: FormErrors = {};
-  if (!values.name.trim())                         errors.name    = 'Name is required.';
-  if (!values.email.trim())                        errors.email   = 'Email is required.';
-  else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(values.email))
-                                                   errors.email   = 'Enter a valid email address.';
-  if (!values.subject.trim())                      errors.subject = 'Subject is required.';
-  if (values.message.trim().length < 20)           errors.message = 'Message must be at least 20 characters.';
-  return errors;
-}
-
-const CONTACT_LINKS = [
-  {
-    icon:  EmailOutlinedIcon,
-    label: 'jcmcardama@gmail.com',
-    href:  'mailto:jcmcardama@gmail.com',
-  },
-  {
-    icon:  LinkedInIcon,
-    label: 'linkedin.com/in/jan-carlo-cardama',
-    href:  'https://www.linkedin.com/in/jan-carlo-cardama',
-  },
-  {
-    icon:  GitHubIcon,
-    label: 'github.com/jcmcardama',
-    href:  'https://github.com/jcmcardama',
-  },
-];
+import { FormState, FormErrors } from '../types/types';
+import { INITIAL_FORM, CONTACT_LINKS, CONTACT_TEXT } from '../utils/constants';
+import { validateForm } from '../utils/validateForm';
+import '../styles/pages/Contact.scss';
 
 export default function Contact() {
   const [form,   setForm]   = useState<FormState>(INITIAL_FORM);
@@ -62,15 +18,18 @@ export default function Contact() {
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
+
     setForm(prev => ({ ...prev, [name]: value }));
+
     if (errors[name as keyof FormErrors]) {
       setErrors(prev => ({ ...prev, [name]: undefined }));
     }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.SubmitEvent) => {
     e.preventDefault();
     const validationErrors = validateForm(form);
+
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors);
       return;
@@ -83,109 +42,81 @@ export default function Contact() {
   };
 
   return (
-    <Container maxWidth="md" sx={{ py: { xs: 8, md: 12 } }}>
-      <Typography variant="overline" sx={{ color: 'secondary.main', letterSpacing: '0.15em', fontWeight: 600 }}>
-        Let's Talk
+    <Container className="contact-container" maxWidth="md">
+      <Typography className="contact-overline" variant="overline">
+        {CONTACT_TEXT.OVERLINE}
       </Typography>
-      <Typography variant="h2" sx={{ mt: 1, mb: 2, fontSize: { xs: '2.2rem', md: '3rem' } }}>
-        Get in Touch.
+      <Typography className="contact-title" variant="h2">
+        {CONTACT_TEXT.TITLE}
       </Typography>
-      <Typography variant="body1" color="text.secondary" sx={{ mb: 8, maxWidth: 500 }}>
-        I'm currently open to senior engineering roles and interesting freelance work.
-        Drop me a message and I'll get back to you within 24 hours.
+      <Typography className="contact-description" variant="body1" color="text.secondary">
+        {CONTACT_TEXT.DESCRIPTION}
       </Typography>
-
-      <Grid container sx={{ justifyContent: 'space-between' }}>
-
-        {/* Left — Contact info + Resume wrapped in matching Paper */}
-        <Grid size={{xs: 12, md: 5 }}>
-          <Paper
-            variant="outlined"
-            sx={{
-              p: { xs: 2, md: 3 },
-              borderColor: 'divider',
-              height: '100%',
-              display: 'flex',
-              flexDirection: 'column',
-              gap: 3,
-            }}
-          >
-            {/* Header */}
+      <Grid container className="contact-section-container">
+        <Grid size={{xs: 12, md: 4.5 }}>
+          <Paper className="contact-section-information-container" variant="outlined">
             <Box>
-              <Typography variant="h6" sx={{ fontWeight: 700, fontSize: '0.95rem', mb: 0.5 }}>
-                Contact Info
+              <Typography className="contact-section-information-header" variant="h6">
+                {CONTACT_TEXT.CONTACT_SECTION.HEADER}
               </Typography>
-              <Typography variant="body2" color="text.secondary" sx={{ fontSize: '0.8rem' }}>
-                Reach out through any of these channels.
+              <Typography className="contact-section-information-body" variant="body2" color="text.secondary">
+                {CONTACT_TEXT.CONTACT_SECTION.BODY}
               </Typography>
             </Box>
-
             <Divider />
-
-            {/* Links */}
-            <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2.5 }}>
+            <Box className="contact-section-information-links-container">
               {CONTACT_LINKS.map(({ icon: Icon, label, href }) => (
-                <Box key={label} sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
-                  <Box
-                    sx={{
-                      width: 36,
-                      height: 36,
-                      borderRadius: 1.5,
-                      bgcolor: 'action.hover',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      flexShrink: 0,
-                    }}
-                  >
-                    <Icon sx={{ color: 'secondary.main', fontSize: '1.1rem' }} />
+                <Box key={label} className="contact-section-information-link-container">
+                  <Box className="contact-section-information-link-icon-container">
+                    <Icon className="contact-section-information-link-icon"/>
                   </Box>
                   <Link
                     href={href}
                     target="_blank"
                     rel="noopener noreferrer"
+                    className="contact-section-information-link-label"
                     underline="hover"
                     variant="body2"
                     color="text.secondary"
-                    sx={{ wordBreak: 'break-all', '&:hover': { color: 'text.primary' }, transition: 'color 0.2s' }}
                   >
                     {label}
                   </Link>
                 </Box>
               ))}
             </Box>
-
-            {/* Spacer pushes the resume button to the bottom */}
             <Box sx={{ flexGrow: 1 }} />
-
             <Divider />
-
             <Button
+              className="download-resume-btn"
               variant="outlined"
               href={resumePDF}
               download="YourName_Resume.pdf"
               startIcon={<DownloadOutlinedIcon />}
               fullWidth
-              sx={{ borderColor: 'divider' }}
             >
-              Download Résumé
+              {CONTACT_TEXT.CONTACT_SECTION.BTN_TEXT}
             </Button>
           </Paper>
         </Grid>
 
         {/* Right — Contact form */}
-        <Grid size={{xs: 12, md: 6 }} sx={{ display: 'flex', flexDirection: 'column', paddingTop: {xs: 4, md: 0 } }}>
+        <Grid size={{xs: 12, md: 6.5 }}>
           <Paper
+            className="contact-section-form-container"
             variant="outlined"
             component="form"
             onSubmit={handleSubmit}
             noValidate
-            sx={{ p: { xs: 2, md: 3 }, borderColor: 'divider', height: '100%' }}
           >
             <Grid container rowSpacing={3} columnSpacing={2.5}>
+              <Grid size={{xs: 12}}>
+                <Typography className="contact-section-form-header" variant="h6">
+                  Send a Message
+                </Typography>
+              </Grid>
               <Grid size={{xs: 12, sm: 6 }}>
                 <TextField
-                  label="Full Name"
+                  label={CONTACT_TEXT.FORM_SECTION.NAME}
                   name="name"
                   value={form.name}
                   onChange={handleChange}
@@ -198,7 +129,7 @@ export default function Contact() {
               </Grid>
               <Grid size={{xs: 12, sm: 6 }}>
                 <TextField
-                  label="Email Address"
+                  label={CONTACT_TEXT.FORM_SECTION.EMAIL}
                   name="email"
                   type="email"
                   value={form.email}
@@ -212,7 +143,7 @@ export default function Contact() {
               </Grid>
               <Grid size={{xs: 12}}>
                 <TextField
-                  label="Subject"
+                  label={CONTACT_TEXT.FORM_SECTION.SUBJECT}
                   name="subject"
                   value={form.subject}
                   onChange={handleChange}
@@ -225,7 +156,7 @@ export default function Contact() {
               </Grid>
               <Grid size={{xs: 12}}>
                 <TextField
-                  label="Message"
+                  label={CONTACT_TEXT.FORM_SECTION.MESSAGE}
                   name="message"
                   value={form.message}
                   onChange={handleChange}
@@ -238,7 +169,8 @@ export default function Contact() {
                   size="small"
                 />
               </Grid>
-              <Grid size={{xs: 12}} sx={{ display: 'flex', justifyContent: 'flex-end' }}>
+              <Box sx={{ flexGrow: 1 }} />
+              <Grid size={{xs: 12}}>
                 <Button
                   type="submit"
                   variant="contained"
@@ -246,7 +178,7 @@ export default function Contact() {
                   endIcon={<SendOutlinedIcon />}
                   fullWidth
                 >
-                  Send Message
+                  {CONTACT_TEXT.FORM_SECTION.BTN_TEXT}
                 </Button>
               </Grid>
             </Grid>
@@ -261,7 +193,7 @@ export default function Contact() {
         anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
       >
         <Alert severity="success" onClose={() => setSuccess(false)} variant="filled">
-          Message sent! I'll be in touch shortly.
+          {CONTACT_TEXT.ALERT_MESSAGE}
         </Alert>
       </Snackbar>
     </Container>

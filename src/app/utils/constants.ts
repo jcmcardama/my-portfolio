@@ -1,4 +1,4 @@
-import type { CareerItem, EducationItem, FooterItem, NavItem, Project, SkillCategory } from "../types/types";
+import type { CareerItem, EducationItem, FooterItem, FormState, NavItem, Project, SkillCategory } from "../types/types";
 import CodeIcon              from '@mui/icons-material/Code';
 import StorageIcon           from '@mui/icons-material/Storage';
 import BuildOutlinedIcon     from '@mui/icons-material/BuildOutlined';
@@ -9,6 +9,9 @@ import DnsIcon               from '@mui/icons-material/Dns';
 import CloudIcon             from '@mui/icons-material/Cloud';
 import TerminalIcon          from '@mui/icons-material/Terminal';
 import IntegrationInstructionsIcon from '@mui/icons-material/IntegrationInstructions';
+import EmailOutlinedIcon    from '@mui/icons-material/EmailOutlined';
+import LinkedInIcon         from '@mui/icons-material/LinkedIn';
+import GitHubIcon           from '@mui/icons-material/GitHub';
 
 // ===================================================================
 // Theme Constants
@@ -211,4 +214,47 @@ export const SKILLS_TEXT = {
   OVERLINE: 'Expertise',
   TITLE: 'Skills.',
   DESCRIPTION: 'Technologies and tools I work with professionally. Dots indicate depth of experience.'
+};
+
+// ===================================================================
+// Contact Page Constants
+// ===================================================================
+
+export const INITIAL_FORM: FormState = { name: '', email: '', subject: '', message: '' };
+
+export const CONTACT_LINKS = [
+  {
+    icon:  EmailOutlinedIcon,
+    label: 'jcmcardama@gmail.com',
+    href:  'mailto:jcmcardama@gmail.com',
+  },
+  {
+    icon:  LinkedInIcon,
+    label: 'linkedin.com/in/jan-carlo-cardama',
+    href:  'https://www.linkedin.com/in/jan-carlo-cardama',
+  },
+  {
+    icon:  GitHubIcon,
+    label: 'github.com/jcmcardama',
+    href:  'https://github.com/jcmcardama',
+  },
+];
+
+export const CONTACT_TEXT = {
+  OVERLINE: "Let's Talk",
+  TITLE: 'Get in Touch.',
+  DESCRIPTION: "I'm currently open to senior engineering roles and interesting freelance work. Drop me a message and I'll get back to you within 24 hours.",
+  CONTACT_SECTION: {
+    HEADER: "Contact Info",
+    BODY: "Reach out through any of these channels.",
+    BTN_TEXT: "Download Resume"
+  },
+  FORM_SECTION: {
+    NAME: "Full Name",
+    EMAIL: "Email Address",
+    SUBJECT: "Subject",
+    MESSAGE: "Message",
+    BTN_TEXT: "Submit"
+  },
+  ALERT_MESSAGE: "Message sent! I'll be in touch shortly."
 };
