@@ -69,8 +69,8 @@ export const lightTheme: Theme = createTheme({
     },
     divider: '#E8E8E4',
     action: {
-      hover: 'rgba(26, 26, 46, 0.05)',   // subtle tint of primary
-      selected: 'rgba(26, 26, 46, 0.08)',   // slightly stronger — used by active nav items
+      hover: 'rgba(26, 26, 46, 0.05)',
+      selected: 'rgba(26, 26, 46, 0.08)',
       focus: 'rgba(26, 26, 46, 0.10)',
       disabledBackground: 'rgba(0, 0, 0, 0.06)',
       disabled: 'rgba(0, 0, 0, 0.30)',
@@ -109,8 +109,8 @@ export const darkTheme: Theme = createTheme({
     },
     divider: '#2A2A2A',
     action: {
-      hover: 'rgba(232, 230, 223, 0.06)',  // subtle tint of primary
-      selected: 'rgba(232, 230, 223, 0.10)',  // slightly stronger — used by active nav items
+      hover: 'rgba(232, 230, 223, 0.06)',
+      selected: 'rgba(232, 230, 223, 0.10)',
       focus: 'rgba(232, 230, 223, 0.12)',
       disabledBackground: 'rgba(255, 255, 255, 0.06)',
       disabled: 'rgba(255, 255, 255, 0.28)',
