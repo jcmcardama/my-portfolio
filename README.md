@@ -1,73 +1,152 @@
-# React + TypeScript + Vite
+# My Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive portfolio website built with React and TypeScript. This showcase demonstrates my skills in full-stack development, UI/UX design, and modern web technologies.
 
-Currently, two official plugins are available:
+## 📋 About Me
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+**Jan Carlo M. Cardama** - Full Stack Developer
 
-## React Compiler
+I'm a passionate developer with a strong foundation in **FUll Stack Web Development**. With experience in 3+ years of development, I focus on creating clean, maintainable code and delivering exceptional user experiences.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+My expertise includes:
+- **Frontend Development**: React, TypeScript, responsive design, component architecture
+- **Styling**: SCSS, Material-UI, CSS-in-JS (Emotion)
+- **Tooling**: Vite, ESLint, modern build processes
+- **Backend**: [Add your backend technologies if applicable]
+- **Other Skills**: [List any additional relevant skills]
 
-## Expanding the ESLint configuration
+I'm passionate about learning new technologies and always eager to collaborate on meaningful projects.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🚀 Project Overview
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+This portfolio serves as a comprehensive showcase of my work, skills, and professional journey. It features:
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- **Interactive Home Page** - A welcoming introduction with quick navigation
+- **About Section** - Detailed information about my background and expertise
+- **Projects Showcase** - Highlighting key projects with descriptions and links
+- **Skills Gallery** - Visual representation of technical competencies
+- **Contact Form** - Easy way for potential collaborators to reach out
+- **Dark/Light Theme Toggle** - Modern user experience with theme preferences
+- **Responsive Design** - Optimized for desktop, tablet, and mobile devices
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+- **React 19** - UI library for building dynamic interfaces
+- **TypeScript** - Type-safe JavaScript for better code quality
+- **Vite 8** - Lightning-fast build tool and dev server
+- **React Router 7** - Client-side routing for navigation
+
+### Styling & UI
+- **Material-UI (MUI) 9** - Professional component library
+- **SCSS** - Advanced styling with variables and mixins
+- **Emotion** - CSS-in-JS for component-scoped styles
+- **DM Sans & DM Serif Display** - Custom fonts via Fontsource
+
+### Development Tools
+- **TypeScript** - Static type checking
+- **ESLint** - Code quality and consistency
+- **Sass** - CSS preprocessing
+
+---
+
+## 📁 Project Structure
+
+```
+src/
+├── app/                    # Main app component and styling
+├── components/             # Reusable React components
+│   ├── Footer.tsx
+│   ├── Layout.tsx
+│   ├── Navbar.tsx
+│   ├── ThemeToggle.tsx
+│   └── TimelineRow.tsx
+├── pages/                  # Page components (route views)
+│   ├── Home.tsx
+│   ├── About.tsx
+│   ├── Projects.tsx
+│   ├── Skills.tsx
+│   └── Contact.tsx
+├── routes/                 # Route configuration
+├── styles/                 # Global and component styles
+├── types/                  # TypeScript type definitions
+├── utils/                  # Helper functions and hooks
+└── main.tsx               # Application entry point
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🚀 Getting Started
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### Prerequisites
+- Node.js (v16 or higher)
+- npm or yarn
+
+### Installation & Running
+
+1. **Clone the repository**
+   ```bash
+   git clone [your-repo-url]
+   cd my-portfolio
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Start the development server**
+   ```bash
+   npm run dev
+   ```
+   The app will open at `http://localhost:5173`
+
+4. **Build for production**
+   ```bash
+   npm run build
+   ```
+
+5. **Preview production build**
+   ```bash
+   npm run preview
+   ```
+
+---
+
+## 📝 Available Scripts
+
+- `npm run dev` - Start development server with hot module reload
+- `npm run build` - Build optimized production bundle
+- `npm run preview` - Preview production build locally
+- `npm run lint` - Run ESLint to check code quality
+
+---
+
+## ✨ Key Features
+
+✅ **Modern Stack** - Built with latest React and TypeScript best practices  
+✅ **Fully Responsive** - Looks great on all devices  
+✅ **Dark/Light Mode** - Theme toggle for user preference  
+✅ **Performance Optimized** - Fast load times with Vite  
+✅ **Type-Safe** - Full TypeScript support  
+✅ **Clean Code** - ESLint configured for code consistency  
+✅ **Material Design** - Professional UI with MUI components  
+
+---
+
+## 📧 Get In Touch
+
+I'm always interested in hearing about new opportunities and collaborations.
+
+- [**Email**](mailto:jcmcardama@gmail.com)
+- [**LinkedIn**](https://www.linkedin.com/in/jan-carlo-cardama/)
+- [**GitHub**](https://github.com/jcmcardama)
+- [**Portfolio**]()
+
+---
+
+**Made with ❤️ by Jan Carlo M. Cardama**
