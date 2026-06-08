@@ -1,0 +1,85 @@
+.skills-container{
+    padding: 64px 0;
+
+    @media (min-width: 900px) {
+        padding: 96px 0;
+    }
+
+    .skills-overline {
+        color: var(--mui-palette-secondary-main);
+        letter-spacing: 0.15em;
+        font-weight: 600;
+    }
+
+    .skills-title {
+        margin-top: 8px;
+        margin-bottom: 16px;
+        font-size: 2.2rem;
+
+        @media (min-width: 900px) {
+            font-size: 3rem;
+        }
+    }
+
+    .skills-description {
+        margin-bottom: 64px;
+        max-width: 500px;
+    }
+
+    .skills-paper-container {
+        padding: 27px;
+        height: 100%;
+        border-color: var(--mui-palette-divider);
+        background-color: var(--mui-palette-background-paper);
+
+        .skills-category-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 8px;
+
+            .skills-category-header-icon {
+                color: var(--mui-palette-secondary-main);
+                font-size: 1.3rem;
+            }
+
+            .skills-category-header-title {
+                font-weight: 700;
+                font-size: 0.95rem;
+            }
+        }
+
+        .skills-category-description {
+            margin-bottom: 24px;
+            font-size: 0.8rem;
+        }
+
+        .skills-category-skills-container {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+
+            .skills-category-skills-item-container {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                .skills-category-skill-item-container {
+                    display: flex;
+                    align-items: center;
+                    gap: 12px;
+
+                    .skills-category-skill-item-icon {
+                        font-size: 1rem;
+                        color: var(--mui-palette-text-secondary);
+                        opacity: 0.7;
+                    }
+
+                    .skills-category-skill-item-name {
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+    }
+}
