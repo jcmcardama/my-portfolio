@@ -16,12 +16,11 @@ export default function About() {
       </Typography>
       <Grid container spacing={6}>
         <Grid>
-          <Typography className="about-description" variant="body1" color="text.secondary">
-            {ABOUT_TEXTS.DESCRIPTION1}
-          </Typography>
-          <Typography className="about-description" variant="body1" color="text.secondary">
-            {ABOUT_TEXTS.DESCRIPTION2}
-          </Typography>
+          {ABOUT_TEXTS.DESCRIPTION.map((paragraph, i) => (
+            <Typography key={i} className="about-description" variant="body1" color="text.secondary">
+              {paragraph}
+            </Typography>
+          ))}
         </Grid>
       </Grid>
       <Divider className="about-divider"/>

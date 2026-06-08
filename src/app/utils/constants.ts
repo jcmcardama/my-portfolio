@@ -13,6 +13,12 @@ import EmailOutlinedIcon    from '@mui/icons-material/EmailOutlined';
 import LinkedInIcon         from '@mui/icons-material/LinkedIn';
 import GitHubIcon           from '@mui/icons-material/GitHub';
 
+const CONTACT_LINK_HREF = {
+  GITHUB: "https://github.com/jcmcardama",
+  LINKEDIN: "https://www.linkedin.com/in/jan-carlo-cardama",
+  EMAIL: "mailto:jcmcardama@gmail.com"
+}
+
 // ===================================================================
 // Theme Constants
 // ===================================================================
@@ -39,9 +45,9 @@ export const NAV_ITEMS: NavItem[] = [
 // ===================================================================
 
 export const FOOTER_ITEMS: FooterItem[] = [
-    { label: 'GitHub',   href: 'https://github.com/yourusername'},
-    { label: 'LinkedIn', href: 'https://linkedin.com/in/yourusername'},
-    { label: 'Email',    href: 'mailto:you@example.com'}
+    { label: 'GitHub',   href: CONTACT_LINK_HREF.GITHUB},
+    { label: 'LinkedIn', href: CONTACT_LINK_HREF.LINKEDIN},
+    { label: 'Email',    href: CONTACT_LINK_HREF.EMAIL}
 ];
 
 export const year = 2026;
@@ -70,9 +76,9 @@ export const HOME_TEXTS = {
 
 export const CAREER: CareerItem[] = [
   {
-    company:  'Acme Corp',
-    role:     'Senior Frontend Engineer',
-    duration: '2022 – Present',
+    company:  'HCL Technologies Ltd - Philippine Branch',
+    role:     'Software Engineer II',
+    duration: 'Nov 2022 – Present',
     bullets:  [
       'Led rebuild of core product dashboard, reducing load time by 40%.',
       'Mentored 3 junior engineers and established frontend code standards.',
@@ -80,42 +86,50 @@ export const CAREER: CareerItem[] = [
     ]
   },
   {
-    company:  'Tech Startup Inc.',
-    role:     'Full-Stack Developer',
-    duration: '2020 – 2022',
+    company:  'Start Virtual',
+    role:     'Virtual Assistant',
+    duration: 'May 2022 – Jun 2022',
     bullets:  [
-      'Built and maintained RESTful APIs serving 50k+ daily active users.',
-      'Introduced TypeScript across the frontend codebase, reducing bugs by 30%.',
+      "Cold called about 200 and texted 1,000 potential sellers daily to check if they are interested in selling their house.",
+      "Categorized the potential leads as a cold, warm or hot lead depending on my client's preference about the state of their properties."
     ]
   },
   {
-    company:  'Freelance',
-    role:     'Web Developer',
-    duration: '2018 – 2020',
+    company:  'Concentrix',
+    role:     'Sales II Advisor',
+    duration: 'Jul 2019 – Jan 2022',
     bullets:  [
-      'Delivered 15+ client projects spanning e-commerce, portfolio, and SaaS.',
+      "Achieved being one of the top performers for the most of 2021 and being the top agent of the LoB during the Q4 2021.",
+      "Managed about 30 calls a day regarding customer’s concern with their vehicle or if they have concerns about GM’s dealerships all around the USA."
     ]
   }
 ];
 
 export const EDUCATION: EducationItem[] = [
   {
-    degree: 'B.Sc. Computer Science',
-    school: 'State University',
-    year:   '2018'
+    degree: 'Full Stack Web Development',
+    school: 'Avion School',
+    year:   '2022'
   },
   {
-    degree: 'AWS Certified Solutions Architect',
-    school: 'Amazon Web Services',
-    year:   '2021'
+    degree: 'Bachelor of Science in Electronics Communication Engineer (Undergraduate)',
+    school: 'University of the Philippines - Diliman',
+    year:   '2019'
   }
 ];
 
 export const ABOUT_TEXTS = {
   OVERLINE: 'About Me',
   TITLE: 'The person behind the code.',
-  DESCRIPTION1: `Hi, I'm ${HOME_TEXTS.NAME} — a full-stack engineer based in the Philippines. I'm passionate about building products that are not only technically sound but also genuinely delightful to use. I care deeply about performance, accessibility, and developer experience.`,
-  DESCRIPTION2: `Outside of work you'll find me contributing to open-source, reading about systems design, or exploring new hiking trails. I'm currently open to senior engineering and tech-lead roles at product-focused companies.`,
+  DESCRIPTION: [
+    "I’m a Software Engineer at HCL Technologies with hands-on experience building scalable and maintainable web applications.",
+
+    "My foundation in full stack development was built through intensive training at Avion School, where I worked with HTML, CSS, JavaScript, ReactJS, Ruby on Rails, and Git/GitHub. Since joining HCL in November 2022, I’ve been working primarily with ReactJS, TypeScript, SCSS, Redux, NodeJS, and MUI, while also contributing to DevOps processes using Jenkins, Docker, and Docker Compose.",
+
+    "I’m experienced in implementing CI/CD pipelines and collaborating in agile environments. I continuously explore modern development practices, including AI-assisted coding tools like GitHub Copilot and Windsurf, to work efficiently and have a high code quality.",
+
+    "With a strong engineering foundation and a growth mindset, I’m passionate about building clean, reliable, and user-focused software.",
+  ],
   CAREER: 'Career',
   EDUCATION: 'Education & Certifications'
 };
@@ -126,31 +140,28 @@ export const ABOUT_TEXTS = {
 
 export const PROJECTS: Project[] = [
   {
-    title: 'DevFlow — Project Management SaaS',
-    category: 'Full-Stack',
+    title: 'My Portfolio',
+    category: 'Frontend',
     description:
-      'A real-time Kanban board built for distributed engineering teams. Features drag-and-drop, ' +
-      'role-based access control, GitHub PR integration, and Slack notifications.',
+      'Think of description for Portfolio',
     tags:      ['React', 'TypeScript', 'Node.js', 'PostgreSQL', 'Socket.io', 'Docker'],
-    githubUrl: 'https://github.com/yourusername/devflow',
+    githubUrl: 'https://github.com/jcmcardama/my-portfolio',
     liveUrl:   'https://devflow-demo.vercel.app'
   },
   {
-    title: 'Luminary — E-Commerce Platform',
+    title: 'AIssistant',
     category: 'Full-Stack',
     description:
-      'A performant, SEO-friendly e-commerce storefront with Stripe payments, inventory management, ' +
-      'and a headless CMS for content editing without deployments.',
+      'AI chatbot using Gemini',
     tags:      ['Next.js', 'TypeScript', 'Stripe', 'Sanity CMS', 'Tailwind CSS', 'Vercel'],
     githubUrl: 'https://github.com/yourusername/luminary',
     liveUrl:   'https://luminary-store.vercel.app'
   },
   {
-    title: 'Pulse — Real-Time Analytics Dashboard',
+    title: 'Inventory Application',
     category: 'Frontend',
     description:
-      'A data-visualization dashboard that ingests live event streams and renders interactive charts ' +
-      'with sub-second latency. Optimized for readability across large datasets.',
+      'Adding To Dos, Managing Inventory',
     tags:      ['React', 'D3.js', 'WebSockets', 'Redis', 'AWS Lambda', 'Chart.js'],
     githubUrl: 'https://github.com/yourusername/pulse',
     liveUrl:   'https://pulse-analytics.vercel.app'
@@ -226,17 +237,17 @@ export const CONTACT_LINKS = [
   {
     icon:  EmailOutlinedIcon,
     label: 'jcmcardama@gmail.com',
-    href:  'mailto:jcmcardama@gmail.com',
+    href:  CONTACT_LINK_HREF.EMAIL,
   },
   {
     icon:  LinkedInIcon,
     label: 'linkedin.com/in/jan-carlo-cardama',
-    href:  'https://www.linkedin.com/in/jan-carlo-cardama',
+    href:  CONTACT_LINK_HREF.LINKEDIN,
   },
   {
     icon:  GitHubIcon,
     label: 'github.com/jcmcardama',
-    href:  'https://github.com/jcmcardama',
+    href:  CONTACT_LINK_HREF.GITHUB,
   },
 ];
 
