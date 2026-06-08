@@ -4,8 +4,8 @@ import {
   Paper, Link, Divider, Snackbar, Alert,
 } from '@mui/material';
 import DownloadOutlinedIcon from '@mui/icons-material/DownloadOutlined';
-import SendOutlinedIcon     from '@mui/icons-material/SendOutlined';
-import resumePDF            from '../assets/resume.pdf';
+import SendOutlinedIcon from '@mui/icons-material/SendOutlined';
+import resumePDF from '../assets/resume.pdf';
 import { FormState, FormErrors } from '../types/types';
 import { INITIAL_FORM, CONTACT_LINKS, CONTACT_TEXT } from '../utils/constants';
 import { validateForm } from '../utils/validateForm';
@@ -90,7 +90,7 @@ export default function Contact() {
               className="download-resume-btn"
               variant="outlined"
               href={resumePDF}
-              download="YourName_Resume.pdf"
+              download="Jan_Carlo_Cardama_Resume.pdf"
               startIcon={<DownloadOutlinedIcon />}
               fullWidth
             >
