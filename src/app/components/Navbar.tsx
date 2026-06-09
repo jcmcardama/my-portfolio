@@ -9,9 +9,8 @@ import MenuIcon  from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import { NavLink, useLocation } from 'react-router-dom';
 import ThemeToggle from './ThemeToggle';
-import '../styles/components/Navbar.scss';
 import { NAV_ITEMS } from '../utils/constants';
-// import carloLogo from '../assets/carlo_logo.png';
+import cloverLogo from '../assets/clover_dp.jpg';
 
 export default function Navbar() {
   const theme   = useTheme();
@@ -36,8 +35,7 @@ export default function Navbar() {
             to="/"
             variant="h6"
           >
-            <Avatar className="navbar-avatar">JC</Avatar>
-            {/* <Avatar alt="JCMC logo" src={carloLogo} /> */}
+            <Avatar alt="CloveR logo" src={cloverLogo} />
           </Typography>
 
           {/* Desktop Nav */}
