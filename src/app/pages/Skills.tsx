@@ -1,6 +1,5 @@
 import { Container, Typography, Grid, Box, Paper } from '@mui/material';
 import { SKILL_CATEGORIES, SKILLS_TEXT } from '../utils/constants';
-import '../styles/pages/Skills.scss'; 
 
 export default function Skills() {
   return (

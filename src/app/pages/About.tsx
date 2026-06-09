@@ -3,7 +3,6 @@ import {
 } from '@mui/material';
 import { ABOUT_TEXTS, CAREER, EDUCATION } from '../utils/constants';
 import TimelineRow from '../components/TimelineRow';
-import '../styles/pages/About.scss';
 
 export default function About() {
   return (

@@ -5,7 +5,6 @@ import {
 import GitHubIcon        from '@mui/icons-material/GitHub';
 import OpenInNewIcon     from '@mui/icons-material/OpenInNew';
 import { PROJECTS, PROJECTS_TEXTS } from '../utils/constants';
-import '../styles/pages/Projects.scss';
 
 export default function Projects() {
   return (

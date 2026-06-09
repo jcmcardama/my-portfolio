@@ -9,7 +9,6 @@ import resumePDF from '../assets/resume.pdf';
 import { FormState, FormErrors } from '../types/types';
 import { INITIAL_FORM, CONTACT_LINKS, CONTACT_TEXT } from '../utils/constants';
 import { validateForm } from '../utils/validateForm';
-import '../styles/pages/Contact.scss';
 
 export default function Contact() {
   const [form,   setForm]   = useState<FormState>(INITIAL_FORM);

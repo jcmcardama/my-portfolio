@@ -2,7 +2,6 @@ import { Box, Typography, Button, Container, Stack, Chip } from '@mui/material';
 // import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import { Link as RouterLink } from 'react-router-dom';
 import { HOME_TEXTS, TAGS } from '../utils/constants';
-import '../styles/pages/Home.scss';
 
 export default function Home() {
   return (
