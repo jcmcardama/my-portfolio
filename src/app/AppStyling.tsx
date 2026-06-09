@@ -5,6 +5,7 @@ import { darkTheme, lightTheme } from "./styles/theme";
 import { CssBaseline } from "@mui/material";
 import { ThemeMode } from "./utils/constants";
 import type { ThemeModeType } from "./types/types";
+import './styles/index.scss';
 
 // Font imports
 import '@fontsource/dm-sans/400.css';

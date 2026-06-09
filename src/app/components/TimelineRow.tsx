@@ -1,6 +1,5 @@
 import { Box } from '@mui/material';
 import type { TimelineRowProps } from '../types/types';
-import '../styles/components/TimelineRow.scss';
 
 export default function TimelineRow({ isLast, children }: TimelineRowProps) {
   return (

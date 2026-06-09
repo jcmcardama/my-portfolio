@@ -1,5 +1,4 @@
 import { Box, Typography, Link, Divider } from '@mui/material';
-import '../styles/components/Footer.scss';
 import { FOOTER_ITEMS, HOME_TEXTS, year } from '../utils/constants';
 
 export default function Footer() {
