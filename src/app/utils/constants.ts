@@ -56,14 +56,14 @@ export const year = 2026;
 // Home Page Constants
 // ===================================================================
 
-export const TAGS = ['React', 'TypeScript', 'Node.js', 'AWS', 'UI/UX'];
+export const TAGS = ['React', 'TypeScript', 'Node.js', 'PostgreSQL', 'Figma'];
 
 export const HOME_TEXTS = {
   OVERLINE: 'Available for opportunities',
   NAME: 'Jan Carlo M. Cardama',
   TITLE: 'Full-Stack Software Engineer',
-  TAGLINE: '"Building products that are fast, accessible, and a joy to use."',
-  SUMMARY: 'A software engineer with 5+ years of experience turning complex problems into elegant, scalable solutions. I thrive at the intersection of great engineering and thoughtful design — shipping products that users love and teams are proud of.',
+  TAGLINE: '"Engineering experiences that are fast, intuitive, and built to last."',
+  SUMMARY: "I'm a Full-Stack Software Engineer who turns complex problems into clean, purposeful products. With a sharp eye for UI execution honed from Figma to production, and a solid command of the full stack from React and TypeScript on the frontend to Node.js and PostgreSQL on the backend, I bring both technical precision and user-first thinking to every project I touch. I'm currently open to new opportunities where I can keep building things that matter.",
   BUTTON: {
     VIEW_WORK: 'View My Work',
     CONTACT: 'Get in Touch'
@@ -80,9 +80,9 @@ export const CAREER: CareerItem[] = [
     role:     'Software Engineer II',
     duration: 'Nov 2022 – Present',
     bullets:  [
-      'Led rebuild of core product dashboard, reducing load time by 40%.',
-      'Mentored 3 junior engineers and established frontend code standards.',
-      'Collaborated cross-functionally with design and product teams.',
+      'Maintaining and enhancing enterprise-grade full-stack products — translating Figma designs into pixel-perfect React and TypeScript components with MUI, while managing robust PostgreSQL databases and Node.js backend services.',
+      'Operating across a comprehensive technical ecosystem that includes automated unit and integration testing with Jest and React Testing Library, containerized development via Docker, and continuous delivery through Jenkins CI/CD pipelines deployed to AWS. ',
+      "Using modern AI-assisted engineering tools — including GitHub Copilot and Windsurf — while actively utilizing and contributing to HCL's own open-source Enchanted Web Components framework to drive consistency and accelerate development across teams.",
     ]
   },
   {
@@ -122,13 +122,9 @@ export const ABOUT_TEXTS = {
   OVERLINE: 'About Me',
   TITLE: 'The person behind the code.',
   DESCRIPTION: [
-    "I’m a Software Engineer at HCL Technologies with hands-on experience building scalable and maintainable web applications.",
-
-    "My foundation in full stack development was built through intensive training at Avion School, where I worked with HTML, CSS, JavaScript, ReactJS, Ruby on Rails, and Git/GitHub. Since joining HCL in November 2022, I’ve been working primarily with ReactJS, TypeScript, SCSS, Redux, NodeJS, and MUI, while also contributing to DevOps processes using Jenkins, Docker, and Docker Compose.",
-
-    "I’m experienced in implementing CI/CD pipelines and collaborating in agile environments. I continuously explore modern development practices, including AI-assisted coding tools like GitHub Copilot and Windsurf, to work efficiently and have a high code quality.",
-
-    "With a strong engineering foundation and a growth mindset, I’m passionate about building clean, reliable, and user-focused software.",
+    "My love for technology started long before I wrote my first line of code. At the Philippine Science High School, I was the kid who stayed curious about how things worked under the hood — and that curiosity only deepened at UP Diliman, where I got my first real taste of web technologies, databases, and systems programming. Life, however, had other plans. Financial realities pulled me away before I could finish my degree — but they never pulled me away from the craft.",
+    "Rather than wait for the perfect circumstances, I adapted. I took a role as a Sales Advisor at Concentrix, handling 30+ calls a day for AT&T and General Motors accounts. What started as a detour became a masterclass. Without any prior experience, I became a Top Agent — sharpening my communication skills, learning to think fast under pressure, and developing a deep respect for the human being on the other end of every interaction. Those years forged a discipline and empathy that I carry into every product I build today.",
+    "When the moment was right, I went all in. In January 2022, I enrolled at Avion School and dove headfirst into modern full-stack development — ReactJS, Ruby on Rails, Git, and Agile collaboration. That decision changed everything. I landed a role as a Software Engineer II at HCL Technologies, where I now build and maintain enterprise-grade products using ReactJS, TypeScript, Node.js, PostgreSQL, and a modern DevOps stack that includes Docker, Jenkins CI/CD, and AWS. My path wasn't linear — and I think that's exactly what makes me the kind of engineer who doesn't fold when things get hard, who figures it out, and who ships.",
   ],
   CAREER: 'Career',
   EDUCATION: 'Education & Certifications'
@@ -224,7 +220,7 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
 export const SKILLS_TEXT = {
   OVERLINE: 'Expertise',
   TITLE: 'Skills.',
-  DESCRIPTION: 'Technologies and tools I work with professionally. Dots indicate depth of experience.'
+  DESCRIPTION: 'Technologies and tools I work with professionally.'
 };
 
 // ===================================================================
