@@ -39,6 +39,7 @@
         font-size: 1.4rem;
 
         @media (min-width: 900px) {
+            margin-bottom: 32px;
             font-size: 2rem;
         }
     }
@@ -79,6 +80,10 @@
             border-color: var(--mui-palette-divider);
             color: var(--mui-palette-text-secondary);
             font-size: 0.75rem;
+        }
+
+        @media (min-width: 900px) {
+            margin-bottom: 48px;
         }
     }
 
