@@ -5,10 +5,11 @@ import BuildOutlinedIcon     from '@mui/icons-material/BuildOutlined';
 import BrushOutlinedIcon     from '@mui/icons-material/BrushOutlined';
 import JavascriptIcon        from '@mui/icons-material/Javascript';
 import DataObjectIcon        from '@mui/icons-material/DataObject';
-import DnsIcon               from '@mui/icons-material/Dns';
 import CloudIcon             from '@mui/icons-material/Cloud';
 import TerminalIcon          from '@mui/icons-material/Terminal';
 import IntegrationInstructionsIcon from '@mui/icons-material/IntegrationInstructions';
+import AutoFixHighIcon from '@mui/icons-material/AutoFixHigh';
+
 import EmailOutlinedIcon    from '@mui/icons-material/EmailOutlined';
 import LinkedInIcon         from '@mui/icons-material/LinkedIn';
 import GitHubIcon           from '@mui/icons-material/GitHub';
@@ -182,37 +183,37 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
   {
     category:    'Frontend',
     icon:        CodeIcon,
-    description: 'Building rich, accessible, and performant user interfaces.',
+    description: 'Building rich, responsive, and component-driven user interfaces.',
     skills: [
-      { name: 'React / Next.js',   icon: JavascriptIcon },
-      { name: 'TypeScript',        icon: DataObjectIcon },
-      { name: 'MUI / Tailwind CSS',icon: BrushOutlinedIcon },
-      { name: 'Testing (Jest / RTL)',icon: IntegrationInstructionsIcon },
-      { name: 'GraphQL (Client)',  icon: DataObjectIcon }
+      { name: 'React / TypeScript',   icon: DataObjectIcon },
+      { name: 'JavaScript / HTML / CSS', icon: JavascriptIcon },
+      { name: 'MUI / SCSS',           icon: BrushOutlinedIcon },
+      { name: 'Redux Toolkit',        icon: DataObjectIcon },
+      { name: 'Testing (Jest / RTL)', icon: IntegrationInstructionsIcon }
     ],
   },
   {
     category:    'Backend',
     icon:        StorageIcon,
-    description: 'Designing reliable APIs and scalable server-side architecture.',
+    description: 'Designing reliable APIs, data schemas, and server-side logic.',
     skills: [
-      { name: 'Node.js / Express', icon: TerminalIcon },
-      { name: 'PostgreSQL',        icon: StorageIcon },
-      { name: 'Redis',             icon: DnsIcon },
-      { name: 'REST & GraphQL',    icon: DataObjectIcon },
-      { name: 'Prisma / Drizzle',  icon: StorageIcon }
+      { name: 'Node.js',              icon: TerminalIcon },
+      { name: 'Ruby on Rails',        icon: CodeIcon },
+      { name: 'PostgreSQL / MySQL',   icon: StorageIcon },
+      { name: 'REST (Postman / Swagger)', icon: DataObjectIcon },
+      { name: 'C++ / Matlab / MIPS',  icon: TerminalIcon }
     ],
   },
   {
     category:    'DevOps & Tools',
     icon:        BuildOutlinedIcon,
-    description: 'Shipping and maintaining production systems with confidence.',
+    description: 'Shipping software securely with modern CI/CD pipelines and AI workflows.',
     skills: [
-      { name: 'Docker',          icon: CloudIcon },
-      { name: 'AWS (EC2/S3/Lambda)', icon: CloudIcon },
-      { name: 'CI/CD (GitHub Actions)', icon: IntegrationInstructionsIcon },
-      { name: 'Vercel / Netlify',icon: CloudIcon },
-      { name: 'Git & GitHub',    icon: TerminalIcon }
+      { name: 'Docker',               icon: CloudIcon },
+      { name: 'AWS',                  icon: CloudIcon },
+      { name: 'CI/CD (Jenkins)',      icon: IntegrationInstructionsIcon },
+      { name: 'Git & GitHub',         icon: TerminalIcon },
+      { name: 'AI Coding (Windsurf / Copilot)', icon: AutoFixHighIcon }
     ],
   }
 ];
