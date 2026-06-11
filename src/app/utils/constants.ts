@@ -143,7 +143,7 @@ export const PROJECTS: Project[] = [
       'Think of description for Portfolio',
     tags:      ['React', 'TypeScript', 'Node.js', 'PostgreSQL', 'Socket.io', 'Docker'],
     githubUrl: 'https://github.com/jcmcardama/my-portfolio',
-    liveUrl:   'https://devflow-demo.vercel.app'
+    liveUrl:   'https://my-portfolio.vercel.app'
   },
   {
     title: 'AIssistant',
@@ -151,8 +151,8 @@ export const PROJECTS: Project[] = [
     description:
       'AI chatbot using Gemini',
     tags:      ['Next.js', 'TypeScript', 'Stripe', 'Sanity CMS', 'Tailwind CSS', 'Vercel'],
-    githubUrl: 'https://github.com/yourusername/luminary',
-    liveUrl:   'https://luminary-store.vercel.app'
+    githubUrl: 'https://github.com/jcmcardama/my-portfolio',
+    liveUrl:   'https://my-portfolio.vercel.app'
   },
   {
     title: 'Inventory Application',
@@ -160,8 +160,8 @@ export const PROJECTS: Project[] = [
     description:
       'Adding To Dos, Managing Inventory',
     tags:      ['React', 'D3.js', 'WebSockets', 'Redis', 'AWS Lambda', 'Chart.js'],
-    githubUrl: 'https://github.com/yourusername/pulse',
-    liveUrl:   'https://pulse-analytics.vercel.app'
+    githubUrl: 'https://github.com/jcmcardama/my-portfolio',
+    liveUrl:   'https://my-portfolio.vercel.app'
   }
 ];
 
@@ -269,7 +269,8 @@ export const CONTACT_TEXT = {
     EMAIL_REQUIRED: "Email is required.",
     INVALID_EMAIL: "Enter a valid email address.",
     SUBJECT_REQUIRED: "Subject is required.",
-    MESSAGE_LENGTH: "Message must be at least 20 characters."
+    MESSAGE_LENGTH: "Message must be at least 20 characters.",
+    ALERT_FAILED_MESSAGE: "An error occured. Please try again later."
   },
   ALERT_MESSAGE: "Message sent! I'll be in touch shortly."
 };

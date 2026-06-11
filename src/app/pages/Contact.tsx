@@ -9,11 +9,14 @@ import resumePDF from '../assets/resume.pdf';
 import { FormState, FormErrors } from '../types/types';
 import { INITIAL_FORM, CONTACT_LINKS, CONTACT_TEXT } from '../utils/constants';
 import { validateForm } from '../utils/validateForm';
+import emailjs from '@emailjs/browser';
 
 export default function Contact() {
   const [form,   setForm]   = useState<FormState>(INITIAL_FORM);
   const [errors, setErrors] = useState<FormErrors>({});
   const [success, setSuccess] = useState(false);
+  const [openSnackbar, setOpenSnackbar] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -27,17 +30,43 @@ export default function Contact() {
 
   const handleSubmit = (e: React.SubmitEvent) => {
     e.preventDefault();
-    const validationErrors = validateForm(form);
 
+    const validationErrors = validateForm(form);
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors);
       return;
     }
-    // ── Replace with your preferred send mechanism (EmailJS, Formspree, etc.) ──
+
+    setIsSubmitting(true);
+
+    emailjs.send(
+      import.meta.env.VITE_EMAILJS_SERVICE_ID,
+      import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+      {
+        name: form.name,
+        email: form.email,
+        subject: form.subject,
+        message: form.message,
+      },
+      {
+        publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+      }
+    ).then(
+      () => {
+        setSuccess(true);
+        setForm(INITIAL_FORM);
+      },
+      (error) => {
+        setSuccess(false);
+        console.error('EmailJS Error:', error);
+      }
+    ).finally(() => {
+      setIsSubmitting(false);
+      setOpenSnackbar(true);
+    });
+
     console.log('Form submitted:', form);
-    setForm(INITIAL_FORM);
     setErrors({});
-    setSuccess(true);
   };
 
   return (
@@ -122,6 +151,7 @@ export default function Contact() {
                   fullWidth
                   required
                   size="small"
+                  disabled={isSubmitting}
                 />
               </Grid>
               <Grid size={{xs: 12, sm: 6 }}>
@@ -136,6 +166,7 @@ export default function Contact() {
                   fullWidth
                   required
                   size="small"
+                  disabled={isSubmitting}
                 />
               </Grid>
               <Grid size={{xs: 12}}>
@@ -149,6 +180,7 @@ export default function Contact() {
                   fullWidth
                   required
                   size="small"
+                  disabled={isSubmitting}
                 />
               </Grid>
               <Grid size={{xs: 12}}>
@@ -164,6 +196,7 @@ export default function Contact() {
                   multiline
                   rows={5}
                   size="small"
+                  disabled={isSubmitting}
                 />
               </Grid>
               <Box sx={{ flexGrow: 1 }} />
@@ -174,8 +207,9 @@ export default function Contact() {
                   size="large"
                   endIcon={<SendOutlinedIcon />}
                   fullWidth
+                  disabled={isSubmitting}
                 >
-                  {CONTACT_TEXT.FORM_SECTION.BTN_TEXT}
+                  {isSubmitting ? 'Sending...' : CONTACT_TEXT.FORM_SECTION.BTN_TEXT}
                 </Button>
               </Grid>
             </Grid>
@@ -184,13 +218,17 @@ export default function Contact() {
       </Grid>
 
       <Snackbar
-        open={success}
+        open={openSnackbar}
         autoHideDuration={5000}
-        onClose={() => setSuccess(false)}
+        onClose={() => setOpenSnackbar(false)}
         anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
       >
-        <Alert severity="success" onClose={() => setSuccess(false)} variant="filled">
-          {CONTACT_TEXT.ALERT_MESSAGE}
+        <Alert
+          severity={success ? 'success' : 'error'}
+          onClose={() => setOpenSnackbar(false)}
+          variant="filled"
+        >
+          {success ? CONTACT_TEXT.ALERT_MESSAGE : CONTACT_TEXT.ERROR_MESSAGE.ALERT_FAILED_MESSAGE}
         </Alert>
       </Snackbar>
     </Container>
