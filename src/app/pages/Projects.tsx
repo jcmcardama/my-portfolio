@@ -66,8 +66,9 @@ export default function Projects() {
                   variant="contained"
                   size="small"
                   endIcon={<OpenInNewIcon fontSize="small" />}
+                  disabled={!project.deployed}
                 >
-                  {PROJECTS_TEXTS.BUTTON.LIVE}
+                  {project.deployed ? PROJECTS_TEXTS.BUTTON.LIVE : PROJECTS_TEXTS.BUTTON.PROGRESS}
                 </Button>
               </CardActions>
             </Card>

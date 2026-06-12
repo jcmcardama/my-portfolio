@@ -137,31 +137,31 @@ export const ABOUT_TEXTS = {
 
 export const PROJECTS: Project[] = [
   {
+    title: 'AucShoes',
+    category: 'Full-Stack',
+    description: 'A Ruby on Rails application that helps to bid and sell shoes online.',
+    tags: ['Ruby', 'Rails', 'Bootsstrap', 'Font Awesome', 'PostgreSQL'],
+    githubUrl: 'https://github.com/emerjohncy/final_project',
+    liveUrl: '#',
+    deployed: false
+  },
+  {
+    title: 'Stock App',
+    category: 'Full-Stack',
+    description: 'A Ruby on Rails API paired with ReactJS front-end built for users to buy and sell stocks.',
+    tags: ['Ruby', 'Rails', 'HTML', 'CSS', 'Javascript', 'PostgreSQL'],
+    githubUrl: 'https://github.com/jcmcardama/stock_trading_api',
+    liveUrl: '#',
+    deployed: false
+  },
+  {
     title: 'My Portfolio',
     category: 'Frontend',
-    description:
-      'Think of description for Portfolio',
-    tags:      ['React', 'TypeScript', 'Node.js', 'PostgreSQL', 'Socket.io', 'Docker'],
+    description: 'A React with Typescript application that showcases my portfolio.',
+    tags:      ['React', 'Typescript', 'SCSS', 'MUI', 'React Router', 'emailjs'],
     githubUrl: 'https://github.com/jcmcardama/my-portfolio',
-    liveUrl:   'https://my-portfolio.vercel.app'
-  },
-  {
-    title: 'AIssistant',
-    category: 'Full-Stack',
-    description:
-      'AI chatbot using Gemini',
-    tags:      ['Next.js', 'TypeScript', 'Stripe', 'Sanity CMS', 'Tailwind CSS', 'Vercel'],
-    githubUrl: 'https://github.com/jcmcardama/my-portfolio',
-    liveUrl:   'https://my-portfolio.vercel.app'
-  },
-  {
-    title: 'Inventory Application',
-    category: 'Frontend',
-    description:
-      'Adding To Dos, Managing Inventory',
-    tags:      ['React', 'D3.js', 'WebSockets', 'Redis', 'AWS Lambda', 'Chart.js'],
-    githubUrl: 'https://github.com/jcmcardama/my-portfolio',
-    liveUrl:   'https://my-portfolio.vercel.app'
+    liveUrl:   'https://my-portfolio.vercel.app',
+    deployed: true
   }
 ];
 
@@ -171,7 +171,8 @@ export const PROJECTS_TEXTS = {
   DESCRIPTION: 'A curated selection of projects that represent the depth and breadth of my engineering work.',
   BUTTON: {
     SOURCE: 'Source',
-    LIVE: 'Live Demo'
+    LIVE: 'Live Demo',
+    PROGRESS: 'Upcoming'
   }
 };
 

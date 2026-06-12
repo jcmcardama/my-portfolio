@@ -35,20 +35,20 @@ export interface FooterItem {
 // ===================================================================
 
 export interface CareerItem {
-  company:  string;
-  role:     string;
+  company: string;
+  role: string;
   duration: string;
-  bullets:  string[];
+  bullets: string[];
 }
 
 export interface EducationItem {
   degree: string;
   school: string;
-  year:   string;
+  year: string;
 }
 
 export interface TimelineRowProps {
-  isLast:   boolean;
+  isLast: boolean;
   children: React.ReactNode;
 }
 
@@ -57,12 +57,13 @@ export interface TimelineRowProps {
 // ===================================================================
 
 export interface Project {
-  title:       string;
+  title: string;
   description: string;
-  tags:        string[];
-  githubUrl:   string;
-  liveUrl:     string;
-  category:    string;
+  tags: string[];
+  githubUrl: string;
+  liveUrl: string;
+  category: string;
+  deployed: boolean;
 }
 
 // ===================================================================
@@ -70,15 +71,15 @@ export interface Project {
 // ===================================================================
 
 export interface Skill {
-  name:  string;
-  icon:  SvgIconComponent;
+  name: string;
+  icon: SvgIconComponent;
 }
 
 export interface SkillCategory {
-  category:    string;
-  icon:        SvgIconComponent;
+  category: string;
+  icon: SvgIconComponent;
   description: string;
-  skills:      Skill[];
+  skills: Skill[];
 }
 
 // ===================================================================
@@ -86,15 +87,15 @@ export interface SkillCategory {
 // ===================================================================
 
 export interface FormState {
-  name:    string;
-  email:   string;
+  name: string;
+  email: string;
   subject: string;
   message: string;
 }
 
 export interface FormErrors {
-  name?:    string;
-  email?:   string;
+  name?: string;
+  email?: string;
   subject?: string;
   message?: string;
 }
