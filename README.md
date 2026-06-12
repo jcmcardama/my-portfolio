@@ -6,14 +6,14 @@ A modern, responsive portfolio website built with React and TypeScript. This sho
 
 **Jan Carlo M. Cardama** - Full Stack Developer
 
-I'm a passionate developer with a strong foundation in **FUll Stack Web Development**. With experience in 3+ years of development, I focus on creating clean, maintainable code and delivering exceptional user experiences.
+I'm a passionate developer with a strong foundation in **Full Stack Web Development**. With experience in 3.5+ years of development, I focus on creating clean, maintainable code and delivering exceptional user experiences.
 
 My expertise includes:
-- **Frontend Development**: React, TypeScript, responsive design, component architecture
-- **Styling**: SCSS, Material-UI, CSS-in-JS (Emotion)
-- **Tooling**: Vite, ESLint, modern build processes
-- **Backend**: [Add your backend technologies if applicable]
-- **Other Skills**: [List any additional relevant skills]
+- **Frontend**: React, TypeScript, component-driven UI, MUI/SCSS, responsive design
+- **Backend**: Node.js, Ruby on Rails, PostgreSQL / MySQL, REST APIs
+- **Tooling & DevOps**: Docker, AWS, CI/CD (Jenkins), Git & GitHub
+- **Testing & DX**: Jest, React Testing Library, Type-safe TypeScript
+- **Emerging tools**: AI-assisted coding workflows (Copilot / Windsurf)
 
 I'm passionate about learning new technologies and always eager to collaborate on meaningful projects.
 
@@ -35,48 +35,38 @@ This portfolio serves as a comprehensive showcase of my work, skills, and profes
 
 ## 🛠️ Tech Stack
 
-### Frontend
-- **React 19** - UI library for building dynamic interfaces
-- **TypeScript** - Type-safe JavaScript for better code quality
-- **Vite 8** - Lightning-fast build tool and dev server
-- **React Router 7** - Client-side routing for navigation
+- React (v19) + React Router
+- TypeScript (v6) for type safety
+- Vite dev server and build
+- Material UI (MUI) for core components
+- SCSS + Emotion for styling
+- Email sending via EmailJS (`@emailjs/browser`)
+- Tooling: ESLint, Sass, Jest (for testing)
 
-### Styling & UI
-- **Material-UI (MUI) 9** - Professional component library
-- **SCSS** - Advanced styling with variables and mixins
-- **Emotion** - CSS-in-JS for component-scoped styles
-- **DM Sans & DM Serif Display** - Custom fonts via Fontsource
+Note: exact package versions are in `package.json`.
 
-### Development Tools
-- **TypeScript** - Static type checking
-- **ESLint** - Code quality and consistency
-- **Sass** - CSS preprocessing
-
----
 
 ## 📁 Project Structure
 
+Top-level `src/` layout:
+
 ```
 src/
-├── app/                    # Main app component and styling
-├── components/             # Reusable React components
-│   ├── Footer.tsx
-│   ├── Layout.tsx
-│   ├── Navbar.tsx
-│   ├── ThemeToggle.tsx
-│   └── TimelineRow.tsx
-├── pages/                  # Page components (route views)
-│   ├── Home.tsx
-│   ├── About.tsx
-│   ├── Projects.tsx
-│   ├── Skills.tsx
-│   └── Contact.tsx
-├── routes/                 # Route configuration
-├── styles/                 # Global and component styles
-├── types/                  # TypeScript type definitions
-├── utils/                  # Helper functions and hooks
-└── main.tsx               # Application entry point
+├── main.tsx                # App entry
+├── vite-env.d.ts
+├── app/                    # Application folder
+│   ├── App.tsx
+│   ├── AppStyling.tsx
+│   ├── assets/
+│   ├── components/
+│   ├── pages/
+│   ├── routes/
+│   ├── styles/
+│   ├── types/
+│   └── utils/              # constants, hooks, validators
 ```
+
+Edit UI text, nav items, projects, and contact links in `src/app/utils/constants.ts`.
 
 ---
 
@@ -145,7 +135,7 @@ I'm always interested in hearing about new opportunities and collaborations.
 - [**Email**](mailto:jcmcardama@gmail.com)
 - [**LinkedIn**](https://www.linkedin.com/in/jan-carlo-cardama/)
 - [**GitHub**](https://github.com/jcmcardama)
-- [**Portfolio**]()
+- [**Portfolio**](https://jcmcardama-portfolio.vercel.app/)
 
 ---
 
