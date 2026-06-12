@@ -160,7 +160,7 @@ export const PROJECTS: Project[] = [
     description: 'A React with Typescript application that showcases my portfolio.',
     tags:      ['React', 'Typescript', 'SCSS', 'MUI', 'React Router', 'emailjs'],
     githubUrl: 'https://github.com/jcmcardama/my-portfolio',
-    liveUrl:   'https://my-portfolio.vercel.app',
+    liveUrl:   'https://jcmcardama-portfolio.vercel.app',
     deployed: true
   }
 ];
