@@ -55,7 +55,6 @@ export default function Home() {
             variant="contained"
             color="primary"
             size="large"
-            disabled
           >
             {HOME_TEXTS.BUTTON.VIEW_WORK}
           </Button>

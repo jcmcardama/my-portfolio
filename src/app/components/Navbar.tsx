@@ -48,7 +48,6 @@ export default function Navbar() {
                   component={NavLink}
                   to={item.path}
                   disableRipple
-                  disabled={item.label == 'Projects'}
                 >
                   {item.label}
                 </Button>
@@ -95,7 +94,6 @@ export default function Navbar() {
                 className={isActive(item.path) ? 'navbar-drawer-button active' : 'navbar-drawer-button'}
                 component={NavLink}
                 to={item.path}
-                disabled={item.label == 'Projects'}
                 onClick={() => setDrawerOpen(false)}
               >
                 <ListItemText
