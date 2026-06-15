@@ -80,7 +80,7 @@ Edit UI text, nav items, projects, and contact links in `src/app/utils/constants
 
 1. **Clone the repository**
    ```bash
-   git clone [your-repo-url]
+   git clone https://github.com/jcmcardama/my-portfolio.git
    cd my-portfolio
    ```
 
