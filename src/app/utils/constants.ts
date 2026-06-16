@@ -146,13 +146,13 @@ export const PROJECTS: Project[] = [
     deployed: false
   },
   {
-    title: 'Stock App',
-    category: 'Full-Stack',
-    description: 'A Ruby on Rails API paired with ReactJS front-end built for users to buy and sell stocks.',
-    tags: ['Ruby', 'Rails', 'HTML', 'CSS', 'Javascript', 'PostgreSQL'],
-    githubUrl: 'https://github.com/jcmcardama/stock_trading_api',
-    liveUrl: '#',
-    deployed: false
+    title: 'Inventory Server Backend',
+    category: 'Backend',
+    description: 'A Node.js with Express API for managing and tracking inventory.',
+    tags: ['NodeJs', 'Express', 'PostgresQL', 'Prisma', 'Render', 'Supabase'],
+    githubUrl: 'https://github.com/jcmcardama/inventory-server-backend',
+    liveUrl: 'https://inventory-server-backend.onrender.com/api-docs/',
+    deployed: true
   },
   {
     title: 'My Portfolio',
