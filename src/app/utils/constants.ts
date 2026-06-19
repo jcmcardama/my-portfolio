@@ -146,21 +146,21 @@ export const PROJECTS: Project[] = [
     deployed: false
   },
   {
+    title: 'Gen-a-README',
+    category: 'Frontend',
+    description: 'A React with TypeScript application that generates README for GitHub repositories.',
+    tags:      ['React', 'Typescript', 'SCSS', 'MUI', 'Gemini', 'Vercel'],
+    githubUrl: 'https://github.com/jcmcardama/readme-generator',
+    liveUrl:   'https://gen-a-readme.vercel.app/',
+    deployed: true
+  },
+  {
     title: 'Inventory Server Backend',
     category: 'Backend',
     description: 'A Node.js with Express API for managing and tracking inventory.',
     tags: ['NodeJs', 'Express', 'PostgresQL', 'Prisma', 'Render', 'Supabase'],
     githubUrl: 'https://github.com/jcmcardama/inventory-server-backend',
     liveUrl: 'https://inventory-server-backend.onrender.com/api-docs/',
-    deployed: true
-  },
-  {
-    title: 'My Portfolio',
-    category: 'Frontend',
-    description: 'A React with Typescript application that showcases my portfolio.',
-    tags:      ['React', 'Typescript', 'SCSS', 'MUI', 'React Router', 'emailjs'],
-    githubUrl: 'https://github.com/jcmcardama/my-portfolio',
-    liveUrl:   'https://jcmcardama-portfolio.vercel.app',
     deployed: true
   }
 ];
@@ -171,7 +171,7 @@ export const PROJECTS_TEXTS = {
   DESCRIPTION: 'A curated selection of projects that represent the depth and breadth of my engineering work.',
   BUTTON: {
     SOURCE: 'Source',
-    LIVE: 'Live Demo',
+    LIVE: 'Live',
     PROGRESS: 'Upcoming'
   }
 };
