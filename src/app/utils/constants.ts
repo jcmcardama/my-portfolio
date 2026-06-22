@@ -57,14 +57,14 @@ export const year = 2026;
 // Home Page Constants
 // ===================================================================
 
-export const TAGS = ['React', 'TypeScript', 'Node.js', 'PostgreSQL', 'Figma'];
+export const TAGS = ['React', 'TypeScript', 'Node.js', 'Next.js', 'PostgreSQL', 'MUI'];
 
 export const HOME_TEXTS = {
   OVERLINE: 'Available for opportunities',
   NAME: 'Jan Carlo M. Cardama',
   TITLE: 'Full-Stack Software Engineer',
   TAGLINE: '"Engineering experiences that are fast, intuitive, and built to last."',
-  SUMMARY: "I'm a Full-Stack Software Engineer who turns complex problems into clean, purposeful products. With a sharp eye for UI execution honed from Figma to production, and a solid command of the full stack from React and TypeScript on the frontend to Node.js and PostgreSQL on the backend, I bring both technical precision and user-first thinking to every project I touch. I'm currently open to new opportunities where I can keep building things that matter.",
+  SUMMARY: `I'm a Full-Stack Software Engineer who turns complex problems into clean, high-performance web products. Merging production-grade engineering rigor with modern AI-assisted workflows, I build and ship features at high velocity without compromising architectural integrity. With a stack anchored in React, TypeScript, Node.js, and PostgreSQL—coupled with an extensive background managing high-value technical communications for global enterprise accounts—I bridge the gap between complex code layers and seamless business logic. I’m currently open to opportunities and building impactful MVPs.`,
   BUTTON: {
     VIEW_WORK: 'View My Work',
     CONTACT: 'Get in Touch'
