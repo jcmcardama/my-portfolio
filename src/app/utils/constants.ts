@@ -162,6 +162,15 @@ export const PROJECTS: Project[] = [
     githubUrl: 'https://github.com/jcmcardama/inventory-server-backend',
     liveUrl: 'https://inventory-server-backend.onrender.com/api-docs/',
     deployed: true
+  },
+  {
+    title: 'Wordpress Portfolio',
+    category: 'CMS',
+    description: 'A WordPress website designed to showcase professional projects and skills.',
+    tags: ['WordPress', 'PHP', 'CSS', 'Elementor', 'Pantheon'],
+    githubUrl: '',
+    liveUrl: 'https://live-carlo-portfolio.pantheonsite.io/',
+    deployed: true
   }
 ];
 

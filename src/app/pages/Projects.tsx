@@ -55,6 +55,7 @@ export default function Projects() {
                   variant="outlined"
                   size="small"
                   startIcon={<GitHubIcon fontSize="small" />}
+                  disabled={project.githubUrl === ''}
                 >
                   {PROJECTS_TEXTS.BUTTON.SOURCE}
                 </Button>
